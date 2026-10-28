@@ -1,0 +1,19 @@
+{
+  "name": "fenceos-assistant",
+  "version": "0.2.0",
+  "description": "Sets up a fence company in FenceOS through the signed-in browser: a first look around, then products, prices, gates, supplier costs, BOM recipes, mappings and locations, with approval at every step.",
+  "author": {
+    "name": "FenceOS Engineering"
+  },
+  "homepage": "https://github.com/The-Fence-Company/fenceos-assistant",
+  "repository": "https://github.com/The-Fence-Company/fenceos-assistant",
+  "license": "UNLICENSED",
+  "keywords": [
+    "fenceos",
+    "fence",
+    "catalog",
+    "bom",
+    "setup",
+    "browser"
+  ]
+}

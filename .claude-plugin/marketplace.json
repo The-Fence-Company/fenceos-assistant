@@ -1,0 +1,14 @@
+{
+  "name": "fenceos",
+  "description": "FenceOS plugins for Claude Code",
+  "owner": {
+    "name": "FenceOS Engineering"
+  },
+  "plugins": [
+    {
+      "name": "fenceos-assistant",
+      "source": "./plugins/fenceos-assistant",
+      "description": "Set up FenceOS through your browser: getting started, then catalog and BOM setup."
+    }
+  ]
+}

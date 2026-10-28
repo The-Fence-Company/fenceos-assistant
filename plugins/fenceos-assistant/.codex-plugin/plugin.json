@@ -1,0 +1,36 @@
+{
+  "name": "fenceos-assistant",
+  "version": "0.2.0",
+  "description": "Sets up a fence company in FenceOS through the signed-in browser: a first look around, then products, prices, gates, supplier costs, BOM recipes, mappings and locations, with approval at every step.",
+  "author": {
+    "name": "FenceOS Engineering",
+    "url": "https://github.com/The-Fence-Company/fenceos-assistant"
+  },
+  "repository": "https://github.com/The-Fence-Company/fenceos-assistant",
+  "license": "UNLICENSED",
+  "keywords": [
+    "fenceos",
+    "fence",
+    "catalog",
+    "bom",
+    "setup",
+    "browser"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "FenceOS Assistant",
+    "shortDescription": "Set up FenceOS through your browser with approval at every step.",
+    "longDescription": "One setup assistant with two modes. Getting started looks at your account and suggests what to do first. Catalog setup builds your fence types, gates, add-ons, prices, supplier material costs, BOM recipes, mappings, and location availability, one fence family at a time, and checks prices and margins against the material lists. It works only in your signed-in FenceOS tab and asks before anything is saved.",
+    "developerName": "FenceOS Engineering",
+    "category": "Productivity",
+    "capabilities": [
+      "Getting started walkthrough",
+      "Catalog and BOM setup"
+    ],
+    "defaultPrompt": [
+      "Help me get set up in FenceOS.",
+      "Set up all our fence types and gates so we can start quoting.",
+      "Set up a fence family from my supplier price sheet."
+    ]
+  }
+}

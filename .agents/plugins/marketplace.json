@@ -1,0 +1,20 @@
+{
+  "name": "fenceos",
+  "interface": {
+    "displayName": "FenceOS"
+  },
+  "plugins": [
+    {
+      "name": "fenceos-assistant",
+      "source": {
+        "source": "local",
+        "path": "./plugins/fenceos-assistant"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_USE"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

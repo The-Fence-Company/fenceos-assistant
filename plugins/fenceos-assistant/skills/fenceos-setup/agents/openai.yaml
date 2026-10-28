@@ -1,0 +1,6 @@
+interface:
+  display_name: "FenceOS Setup"
+  short_description: "Get started, then set up products, prices, and material lists in FenceOS."
+  default_prompt: "Use $fenceos-setup to help me get set up in FenceOS."
+policy:
+  allow_implicit_invocation: true
