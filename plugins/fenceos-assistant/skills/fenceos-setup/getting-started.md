@@ -9,14 +9,16 @@ Open each of these and note what you see. Read them in a tab of your own, not th
 | Where | What to note |
 |---|---|
 | **Launch Pad** | The **Estimates & sales** numbers (quotes sent, acceptance rate, dollars won this month, and the monthly goal), **Today in Operator** (jobs today, crews out, unscheduled), and **Recent quote activity**. |
-| **Organization → Products** | The counts on the **Fence Types**, **Gates**, **Add-ons**, **Groups**, and **Finishes** tabs. A **Custom** badge means the organization owns the product; a **Template** badge means it comes from the platform library. Note fence types with no cost (their margin shows 100%), archived items, and names that look like duplicates. Is the **BOM Setup** button present? |
-| **BOM Setup** | Only when the company has Operator and the button is present: how many fence types are linked to a BOM, and whether any recipe cells say **needs materials**. For a full picture, run the [coverage check](references/coverage-check.md). |
+| **Organization → Products** | The counts on the **Fence Types**, **Gates**, **Add-ons**, **Groups**, and **Finishes** tabs. A **Custom** badge means the organization owns the product; a **Template** badge means it comes from the platform library. Note fence types with no cost (their margin shows 100%), archived items, and names that look like duplicates. Use [role-specific navigation](references/navigation.md) to reach BOM Setup. |
+| **BOM Setup** | Only when the company has Operator and the page opens (titled **Product BOM Setup**): the **Products linked** count against the fence type count, which fence types say **No BOM Link**, and, inside **Advanced BOM Catalog**, whether any recipe cells say **needs materials**. For a full picture, run the [coverage check](references/coverage-check.md). Never click **Reset organization BOM** or **Backfill Default BOM Catalog**. |
 | **Locations** | How many locations, how many products each has enabled ("19 enabled"), its online-estimate link, and its notification emails. Note name typos, and locations that look like tests or demos but have a live estimate link. |
 | **Quotes** | The total in "Showing N of N quotes." A customer row can show an accepted quote with other options "still pending." Those are usually alternatives to the accepted one, not open quotes to chase. |
 | **Org Settings** | **Configuration progress** and **Setup checklist (N need attention)**. Only some sections earn a **Configured** badge; Wood fence stain, Fence removal, Quote validity, Customer reminders, Financing, and Commission guardrails never show one, so open those sections and read the fields. Read only. |
-| **Sidebar** | Which sections are visible (Core, Organization, Platform) and the role shown under the account name at the bottom. If Products or Locations are missing, the user is a standard User, not an Org Admin, and setup work needs an admin. |
+| **Sidebar** | Which sections are visible (Core, Organization, Platform) and the role shown under the account name at the bottom. Confirm the visible role; missing controls alone do not establish role or permissions. |
 
 If a page will not open or a control is missing, note it and move on.
+
+Follow [company context and navigation](references/navigation.md), including its one-reload limit and rate-limit handling, before reporting missing access or an empty catalog.
 
 ## 2. Report what you found
 

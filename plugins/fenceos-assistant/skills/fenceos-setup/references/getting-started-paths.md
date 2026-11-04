@@ -20,7 +20,7 @@ Ask: "Do you use Estimator only, or Estimator and Operator?"
 - **Estimator only:** they quote with basic pricing and do not get build-of-material lists. Run the product setup only: fence types, gates, add-ons, finishes, descriptions, photos, price and cost (with "Help me price it" if needed). Skip the BOM pass, supplier cost imports and BOM mappings. Do not call prices provisional for lack of a BOM; they are final once the owner approves them. Cost still matters for margin and commission, so get a real number.
 - **Estimator and Operator:** they get material lists. Offer the two paths below.
 
-If unsure, check the screens (for example whether **BOM Setup** is offered on Products), but confirm with the user instead of assuming; a missing button can also mean the feature is not switched on.
+If unsure, follow [company context and navigation](navigation.md) for the effective role, then confirm with the user. A missing button or failed load alone does not establish access or feature availability.
 
 Ask the user which way they want to start; do not choose for them. Explain both in plain words, then let them pick.
 

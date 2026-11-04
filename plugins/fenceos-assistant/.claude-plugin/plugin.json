@@ -1,7 +1,7 @@
 {
   "name": "fenceos-assistant",
-  "version": "0.2.0",
-  "description": "Sets up a fence company in FenceOS through the signed-in browser: a first look around, then products, prices, gates, supplier costs, BOM recipes, mappings and locations, with approval at every step.",
+  "version": "0.2.3",
+  "description": "Browser-guided FenceOS catalog and BOM setup, plus optional Matrix budgeting and Cash Copilot planning when requested. Each workflow requires its own business context and exact batch approval.",
   "author": {
     "name": "FenceOS Engineering"
   },
@@ -14,6 +14,8 @@
     "catalog",
     "bom",
     "setup",
-    "browser"
+    "browser",
+    "budget",
+    "cash-planning"
   ]
 }

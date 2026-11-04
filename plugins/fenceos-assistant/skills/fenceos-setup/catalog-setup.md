@@ -6,9 +6,9 @@ You work from the user's own browser. Everything you learn comes from screens th
 
 ## 1. Before catalog work
 
-1. If the user is a Super Admin, make sure **Viewing as** shows the target organization before opening **Products** or **BOM Setup**. Without it, Products edits land in the shared platform template library. Recheck this before every save.
-2. Open **Organization → Products** and confirm the **BOM Setup** button is present. If it is missing for an Org Admin, a Super Admin has to turn on **Allow Org Admins to manage Advanced BOM Catalog** in Org Settings → Feature rollouts. Until then only Phases A, D, and F are possible; say so.
-3. Open **BOM Setup**. If it shows an unsaved draft, ask the user whether to publish it, reset it, or stop. Never reset someone else's draft yourself. Only one draft stays open during the run.
+1. Confirm the company and effective role using [company context and navigation](references/navigation.md); recheck before every write.
+2. Follow that reference's Org Admin or Super Admin route. If advanced access is unavailable after a successful load, report the limitation; do not change permissions or feature rollouts. Only accessible phases may proceed.
+3. Open **BOM Setup** (the page is titled **Product BOM Setup**), then **Advanced BOM Catalog** for the BOM Builder with its **Guided Builder** and **Advanced Editor** views. If it shows an unsaved draft, stop and ask the user to resolve their draft. Do not publish or discard someone else's draft. Only one draft stays open during the run.
 4. If any step above fails or the wrong company is showing, stop and say so.
 
 ## 2. Inputs to collect before any work
@@ -80,7 +80,7 @@ Reference: [recipes](references/recipes.md).
 6. Run the guided review with the labeled sample drawing. Compare the resulting quantities with the customer's expected quantities. A difference is a blocker, not a note.
 7. Present the batch, get approval, then publish through **Review catalog and mappings** and **Confirm catalog and mappings publish** so catalog and mappings store together. Advanced Editor's **Review & Publish** can drop mappings; use it only when the user explicitly chooses expert repair.
 8. If FenceOS asks for **Re-run Preview** because another window changed the catalog, stop, report the conflict, and prepare a new review. Do not retry on your own.
-9. After publish, note the row counts and the "mappings preserved or dropped" line in the confirmation and put them in the receipt.
+9. After publish, note the row counts, the "mappings preserved or dropped" line, and catalog revision/generation when shown. Record this as **published** and run the [coverage check](references/coverage-check.md). Counts alone do not prove usable materials, verified quantities, or a working saved quote BOM. Publication does not refresh historical snapshots.
 
 ### Phase D. Sellable fence type and gates
 
@@ -99,7 +99,7 @@ Reference: [products](references/products.md).
 ### Phase E. Product BOM links
 
 1. Open each fence product and choose the **Fence System** and **BOM Style** from Phase C, the default variant from the matrix, the optional setup height, and the wood gate build system when applicable.
-2. If the guided publish in Phase C already created the link, reopen it and confirm instead of re-entering it.
+2. If the guided publish in Phase C already created the link, reopen it and confirm instead of re-entering it. Match the exact sellable fence-type ID when shown, including whether it is inherited or an organization-owned copy. After an edit or duplication, verify the product actually selected in the estimator is the mapped product; a similar label is not identity proof. If identity is not exposed, mark it unavailable.
 3. Confirm the saved link is the same system, style, and default variant the Phase D base cost check used. If it differs, rerun the check before the receipt.
 4. Confirm no approved gate type and width would show a **Mixed** BOM. Run the [coverage check](references/coverage-check.md) for the family: every height, variant, and gate width the products offer has a recipe.
 
@@ -112,7 +112,7 @@ Reference: [products](references/products.md).
 
 After a large publish or a pricing change, offer to prove the work the way a rep would: save one labeled test quote per changed family on a test customer with no phone or email, read the material list FenceOS saved for it, and compare prices and part amounts with the recipes. Only with the owner's yes; follow [test quote](references/test-quote.md). Never send or present it, and archive it afterward.
 
-Produce the receipt in section 6. See [verification](references/verification.md) for what counts as verified.
+Produce the receipt in section 6, separating publication, coverage readback, guided quantities, and saved test-quote BOM proof. An optional test that is declined or blocked remains unverified. See [verification](references/verification.md) for what counts as verified. If the user reports an existing failed historical-job BOM or generic 409, use the [BOM failure handoff](references/bom-failure-handoff.md); a successful fresh test does not prove an old job repaired.
 
 ## 4. Units cheat sheet
 
@@ -153,12 +153,13 @@ Price sources: the supplier file, or the invoice number and date behind each pri
 Skipped or held rows: with reasons
 Conflicts: other-editor or revision conflicts, left unmodified
 Verified on screen: units, costs, prices, mappings, availability, heights, variants, coverage
-Sample output: expected vs actual quantities, pass or fail
+Guided quantities: verified, failed, or unverified; sample identity, expected vs actual quantities, and reason if not compared
 Base cost check: per fence type and gate, BOM materials per typical section vs Base Cost, flagged rows, and the user's decision on each
 Margin by height: the margin at each height offered, and any height moved or split
-Coverage: gaps left between what Products sells and what the BOM covers
-Test quotes: quote numbers, pass or fail per family, and whether they were archived
-Publication: row counts and mappings preserved or dropped, from the confirmation
+Coverage readback: checked or unverified; exact product IDs/ownership when shown, heights/variants/gates checked, gaps and unavailable identity
+Saved test-quote BOM: verified, failed, or unverified (declined/blocked/not run); quote number/internal ID, snapshot identity/source/status when visible, expected vs actual quantities per family, and archive outcome
+Publication: published or unverified; row counts and mappings preserved or dropped from the confirmation; revision/generation when shown
+Historical-job recovery, only if raised: unverified/out of scope; bounded failure handoff prepared, no job mutation
 Recovery references: per phase, from section 7
 Unverified state: anything not reopened and compared
 Unresolved decisions for the user:
@@ -178,7 +179,7 @@ Capture the recovery reference before the write, not after.
 | Location availability | record current state | no native undo; toggle back by hand |
 | Product BOM link | record current system, style, variant | re-map by hand |
 
-Paths with no native undo get a louder warning in the batch and a second yes before save.
+Paths with no native undo get a clear warning in the exact batch before its one approval. Changed scope requires a new approval.
 
 ## 8. Stop conditions
 
@@ -198,10 +199,11 @@ Stop, leave the UI as it is, and report when any of these occur.
 ## 9. Never
 
 - Type or request passwords, codes, or API keys.
-- Save, publish, import, or reset without the user's yes on that exact batch.
+- Save, publish, import, or discard this run's unsaved draft without the user's yes on that exact batch. This never permits an organization BOM reset or backfill.
 - Invent costs, dimensions, quantities, package counts, or construction rules.
 - Pick a product, material, or mapping by a similar name.
-- Treat an empty or partial list as proof that something does not exist.
+- Treat an empty or partial list as proof that something does not exist. Follow [navigation](references/navigation.md) for bounded load checks and role-appropriate company context.
+- Click **Reset organization BOM** or **Backfill Default BOM Catalog**. They rewrite the whole organization's BOM; only a Super Admin acting outside this skill uses them.
 - Touch accepted quotes, deposits, payments, customer messages, schedules, production, permissions, or platform templates.
 - Open the user's email without a yes, or reply to, forward, archive, delete, label, or mark any message in it. Ask before downloading an attachment.
 - Put customer, job, or invoice details into a file you create for an import.

@@ -8,8 +8,8 @@ The Products catalog and the BOM catalog are edited separately and nothing warns
 
 ## Steps
 
-1. On **Organization → Products**, list every **enabled** fence type with its heights and variants (colors), and every enabled gate product with its type (single or double), widths, and heights. Note which gate products each fence type uses online.
-2. In **BOM Setup → Advanced Editor → Fence Type Mappings**, record which fence types are linked, and to which system, style, and default variant.
+1. On **Organization → Products**, list every **enabled** fence type with its heights and variants (colors), and every enabled gate product with its type (single or double), widths, and heights. Note which gate products each fence type uses online. Record exact product IDs and inherited versus organization-owned identity when shown; mark missing identity unavailable.
+2. In **BOM Setup → Advanced Editor → Fence Type Mappings**, record which exact fence-type IDs are linked, and to which system, style, and default variant. Check the effective product selected in the estimator, especially after editing an inherited product or duplicating one. A matching name, a successful catalog read, or a preserved-mapping count does not prove that selected product is mapped.
 3. For each linked fence type, open its style and check, for every height it sells and every variant it offers:
    - a section recipe;
    - line, end, corner, and gate post recipes (a shared, unscoped post recipe counts);
@@ -23,8 +23,10 @@ The Products catalog and the BOM catalog are edited separately and nothing warns
 
 ## Table
 
-| Product | Linked to | Height | Variant | Section | Posts | Gates covered | Gap |
+| Product / exact ID / ownership when shown | Linked to | Height | Variant | Section | Posts | Gates covered | Gap |
 |---|---|---|---|---|---|---|---|
+
+For an approved saved test quote, compare every relevant saved line's fence-type ID, height, variant and gates, not only the primary fence type. Takeoff uses the quote's organization and exact saved fence-type IDs, not product names. For an existing historical failure, use the [BOM failure handoff](bom-failure-handoff.md); do not open or modify historical jobs as a routine coverage step.
 
 Under the table list:
 

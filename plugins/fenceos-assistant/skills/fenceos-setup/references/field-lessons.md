@@ -70,6 +70,7 @@ Hand-written from a live build of one company's chain-link, vinyl, cedar and Avi
 
 - The guided review's sample proves the recipes, not what a rep sees. After a big publish or a pricing change, offer a saved test quote per changed family on a labeled test customer: see [test quote](test-quote.md).
 - When the owner asks how the BOM compares with what they sell, run the [coverage check](coverage-check.md) and answer with the gap list.
+- Publishing does not refresh historical snapshots. A protected 409 may preserve prior output, and identical successful output may reuse a snapshot/hash without a new timestamp. For old failed jobs or a generic 409, use the read-only [BOM failure handoff](bom-failure-handoff.md); do not repeat rebuilds or infer recovery from a fresh test.
 
 ## Supplier data
 
