@@ -1,6 +1,6 @@
 {
   "name": "fenceos-assistant",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Browser-guided FenceOS catalog and BOM setup, plus optional Matrix budgeting and Cash Copilot planning when requested. Each workflow requires its own business context and exact batch approval.",
   "author": {
     "name": "FenceOS Engineering",
@@ -21,7 +21,7 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "FenceOS Assistant",
-    "shortDescription": "FenceOS setup and optional budget planning, with approved browser actions.",
+    "shortDescription": "FenceOS catalog and BOM setup",
     "longDescription": "One plugin, two independent skills. FenceOS setup covers getting started, catalog and BOM work. Explicit budget or cash-plan requests use Matrix and Cash Copilot setup. Installing the package does not start finance, enable products, connect accounts or authorize data imports or writes. Each workflow verifies its own business, browser capability and approvals; finance readiness and BOM proof stay separate.",
     "developerName": "FenceOS Engineering",
     "category": "Productivity",
@@ -34,6 +34,9 @@
       "Help me get set up in FenceOS.",
       "Set up all our fence types and gates so we can start quoting.",
       "Set up a fence family from my supplier price sheet."
-    ]
+    ],
+    "composerIcon": "./assets/fenceos-icon.png",
+    "logo": "./assets/fenceos-icon.png",
+    "websiteURL": "https://github.com/The-Fence-Company/fenceos-assistant"
   }
 }
