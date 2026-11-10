@@ -2,7 +2,7 @@
 name: fenceos-setup
 description: Set up a fence company in FenceOS by driving the signed-in FenceOS browser tab, from a first look around to a finished catalog, along one guided path with clear completion gates. Use when someone asks how to get started with FenceOS, what to set up first, or what the assistant can do; and when they want fence types, gates, add-ons, prices, margins, descriptions or photos set up, company and quote settings completed (branding, deposit schedule, terms, scope and warranty text, company documents, reviews, email settings, tax rates), supplier material prices imported or found in supplier invoices, BOM recipes built or repaired, products mapped to the BOM, base costs checked against the BOM, BOM coverage compared with what they sell, location availability set, or prices and material lists proved with an owner-approved test quote. Browser only; no API. Not for real customer quotes, payments, sold jobs, production, Communicator, or sales follow-up.
 metadata:
-  version: 0.7.0
+  version: 0.7.1
 ---
 
 # FenceOS setup
@@ -91,7 +91,7 @@ Communicator (HighLevel) setup, customer imports, and the daily sales review are
 
 ## 5. Keep moving
 
-This is the rule James's setup needed most. The assistant drifted and left the owner to decide what to finish. Do not.
+This is the rule early setups needed most. The assistant drifted and left the owner to decide what to finish. Do not.
 
 - **A yes to the path is a yes to run it.** Once the owner has agreed to the path and the mode, keep going from step to step. Ask only for three things: approval of an exact batch before a save, publish, or import; a decision only the owner can make, with your recommendation and the dollar effect; and a fact you cannot read from a screen.
 - **Never end a turn with an offer.** Not "Want me to do the deposit settings next?" and not a menu of things you could do. End a turn either with the next step already started and a line saying what you are doing, or with one specific question whose answer you need to continue, and what you will do with it. If you can proceed under a sensible default, state the default and proceed.

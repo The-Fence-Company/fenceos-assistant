@@ -2,7 +2,7 @@
 
 FenceOS Assistant helps a fence company set up products, prices and bills of materials through its signed-in browser. An optional finance module helps with Matrix budgets and Cash Copilot plans when you request it. You sign in, confirm the business and approve each exact batch before it changes anything.
 
-This package is **Assistant 0.2.6**, with **FenceOS setup 0.7.0** and **Matrix / Cash Copilot setup 3.2**. Verify these versions in your installed copy and start a new session after updating.
+This package is **Assistant 0.2.7**, with **FenceOS setup 0.7.1** and **Matrix / Cash Copilot setup 3.2**. Verify these versions in your installed copy and start a new session after updating.
 
 This GitHub package is distributed separately from OpenAI's official directory. Official directory review and clean Windows/client browser acceptance remain unverified. Confirm the actual reviewed public release commit before installing.
 
@@ -17,7 +17,7 @@ One marketplace, `fenceos`, contains one plugin, `fenceos-assistant`, and two in
 
 | Skill | Use it for |
 | --- | --- |
-| `fenceos-setup` 0.7.0 | Getting started, products, gates, add-ons, supplier costs, BOM recipes, mappings and locations. Owner-approved test quotes check only the tested quantities. |
+| `fenceos-setup` 0.7.1 | Getting started, products, gates, add-ons, supplier costs, BOM recipes, mappings and locations. Owner-approved test quotes check only the tested quantities. |
 | `matrix-cash-copilot-setup` 3.2 | Explicit annual-budget or cash-plan requests, with separate business, host, plan, period and data approval. |
 
 ## Optional finance planning
@@ -43,4 +43,4 @@ Communicator setup and daily sales review are outside this package. FenceOS setu
 
 ## Maintainers
 
-Both plugin manifests share a version; each skill has its own version. The private source checkout's release-preparation guide defines the explicit public payload, local projection, archives and separately authorized publication. Public availability history belongs in dated release records; verify the actual installed version before use.
+Both plugin manifests share a version; each skill has its own version. The plugin ships its own `LICENSE` (free to use only with FenceOS, Matrix and Cash Copilot) and a short owner-facing `README.md`; both manifests point to it with `SEE LICENSE IN LICENSE`. The private source checkout's release-preparation guide defines the explicit public payload, local projection, archives and separately authorized publication. Public availability history belongs in dated release records; verify the actual installed version before use.
