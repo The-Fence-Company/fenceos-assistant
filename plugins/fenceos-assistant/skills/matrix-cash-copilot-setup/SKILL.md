@@ -2,13 +2,13 @@
 name: matrix-cash-copilot-setup
 description: Guide an owner of any experience level through a complete next-year Matrix budget and supporting Cash Copilot plan across several sessions, using their available records and authorized browser control. Use for explicit Matrix budget or Cash Copilot plan setup, migration, annual planning, or a requested finance review; not general FenceOS setup.
 metadata:
-  version: "3.1"
-  revised: "2026-11-04"
+  version: "3.2"
+  revised: "2026-11-08"
 ---
 
 # Build next year's usable budget together
 
-The default outcome is a complete, understood, saved and verified next-year annual budget, with supporting cash planning, in **8–10 focused working hours across a few sessions**. This is a design target, not a tested universal promise. Respect an explicitly different year or narrower task. A current cash concern may change sequence without replacing the annual finish line. Never call missing material inputs complete to meet a time target.
+The default outcome is a complete, understood, saved and verified next-year annual budget, with supporting cash planning, in **8 to 10 focused working hours across a few sessions**. This is a design target, not a tested universal promise. Respect an explicitly different year or narrower task. A current cash concern may change sequence without replacing the annual finish line. Never call missing material inputs complete to meet a time target.
 
 This workflow can be an optional finance-planning module inside FenceOS Assistant. Route explicit Matrix budget or Cash Copilot planning requests here. A general FenceOS setup request belongs to `fenceos-setup`; do not start finance intake or show a finance prompt during that setup. Installing or invoking this module grants no financial, account, integration or deployment permissions. It never enables Cash, provisions accounts, connects accounts, imports data, publishes rates or approves financial batches by itself. Keep each business's decisions and checkpoints separate. Finance Saved/Reconciled/Ready evidence never establishes FenceOS catalog coverage, quantities or saved test-quote BOM proof.
 
@@ -34,11 +34,31 @@ For autosaving fields, establish the exact approved batch before the first keyst
 
 ## Execute and verify
 
-Recheck business and selected plan before writes and after browser/account switches. Use the supported UI, never hidden APIs or a security bypass. Keep one browser operator. Use a small batch, save, then inspect actual persisted results. On timeout, inspect whether it saved before any retry. Use the [Action receipt](references/action-receipt.md) for imports, conversions and meaningful batches.
+Recheck business and selected plan before writes and after browser/account switches. Use the supported UI, never hidden APIs or a security bypass. Keep one browser operator. Use a small batch, save, reload, then read the persisted values back before describing the batch to the owner. On timeout, inspect whether it saved before any retry. Use the [Action receipt](references/action-receipt.md) for imports, conversions and meaningful batches, and keep every change in the change ledger described below.
 
 Evaluate three separate questions: **saved correctly, reconciled to evidence/approved assumptions, ready for its stated use**. An unchanged export or reload proves only its tested scope. A discrepancy blocks dependent calculations, writes and reliance, not unrelated preparation. Do not adjust correct source numbers to force a display match. Reconcile ordinary, payroll-heavy, month-end and year-boundary cash weeks and exact coverage. Matrix readiness and Cash Copilot readiness are reported separately.
 
 Follow [Bounded recovery and support](references/recovery-and-support.md): after two failed cycles try one different supported approach; stop at three cycles or about five active diagnostic minutes per blocker, cumulative across resumptions. Also estimate effort before lengthy successful repetitions; agree a bounded slice rather than silently creating many workaround rules. Support sending always needs explicit scope and approval.
+
+## Keep moving, and say only what the screen has shown
+
+The first finance debrief found three save attempts that reverted after reload while the agent had already called them saved, a summary profit that left out costs the detailed tabs carried, commission and debt handled without guidance, and repair instructions handed to the owner to relay. These rules exist so that cannot repeat. Each ends with the test a live run must pass.
+
+- **Lead to the finish.** A yes to the plan is a yes to run it. Never end a turn with an offer or a menu of things you could do; end with the next step already started, or with one specific question whose answer you need and what you will do with it. Ask only for exact batch approval, a decision only the owner can make (with your recommendation and its dollar effect), or a fact no screen or record answers. Test: no turn in the transcript ends with "Want me to" or a list of options.
+
+- **Saved means read back.** Every change moves through four states: **approved** (the owner's yes on the exact batch), **entered** (typed or selected in the live control), **persisted** (a reload or reopen of the same business and plan shows the value), **reconciled** (the persisted value matches the approved batch and its evidence). Say "entered" until the reload; say "saved" only at persisted; say "done" only at reconciled. A save-error banner, a form that stays open, a status that never reaches saved, or a value that reverts on reload means not persisted: say so in the same message, keep the change pending in the ledger, retry once after one concrete correction, then follow [Bounded recovery and support](references/recovery-and-support.md). Never describe a batch as saved while its reload check is still ahead, and never let a later summary promote an entered change to saved. Test: every "saved" in the transcript follows a reload read-back of that value; a change that reverted appears in the checkpoint as pending, never as saved.
+
+- **Keep the change ledger.** The private checkpoint carries one row per approved change with its current state; the template is in [Sessions, readiness and checkpoint](references/session-flow-and-summary.md). A cancelled edit, a closed dialog or a failed save leaves the row pending, not removed and not done, until a reload shows the final value. Saved for a section is yes only when every row in it is persisted. Test: after a cancellation followed by a failed save, the ledger shows that change as pending with the product's error text, and the section's Saved reads no or uncertain.
+
+- **One expense calculation.** Build total planned expense once, from the detailed tabs, and derive every summary, margin and profit figure from it, following [Financial intake](references/financial-intake.md). Commission is placed once, where the owner and bookkeeper classify it. Debt is reconciled as principal (cash, not expense), interest (expense) and depreciation (expense, not cash). Moving a cost between overhead and COGS changes the presentation (gross margin, Magic Number, overhead percentage), not total expense or profit; say so when asked. A summary profit that omits a cost the detailed COGS carries is a reconciliation failure that blocks reliance on both until explained. Test: recompute annual total expense from the detailed tabs and compare it with the summary; the difference is zero or explained rounding, and commission appears in exactly one place.
+
+- **Own the repair.** When the product itself fails and bounded recovery is exhausted, take the engineering-repair route in [Bounded recovery and support](references/recovery-and-support.md): capture sanitized evidence, draft the support request yourself, offer to send it with the owner's yes, and keep working on everything that does not depend on the fix. Never hand the owner commands, console steps or developer instructions to relay. Test: a run with a product fault shows no instruction addressed to the owner for someone else to carry out, and the checkpoint shows the evidence capture and the request's drafted / sent / blocked state.
+
+- **Current assumptions before annualizing.** Before a historical year or a partial year becomes a baseline, record the owner's current operating assumptions: cancelled or new vendors, one-time credits and refunds, costs that started or stopped mid-year, loan lines that mix principal and interest, and known price changes. Adjust each affected line per approved assumption and label the result modeled, following [Financial intake](references/financial-intake.md). Test: every annualized line in the decision table carries a current-assumption status; no partial-year line is annualized without an owner-approved assumption.
+
+- **Signed-in sessions expire.** When the product or an accounting source shows a sign-in page mid-session, say the session expired, ask the owner to sign in again in the same browser, then re-read business, plan and the ledger before any write. Count it as owner-required waiting, not a diagnosis cycle.
+
+- **Controls over docs.** When a guide describes a control the page does not show, or a currency or percentage field behaves differently from its description, the live control wins. Establish the unit with one approved value and a reload before entering the batch, and record the parity gap for support. Refreshing the product guides proves product knowledge, not that this installed skill is current; state the installed version and revision from this file's frontmatter at each start, as [Live knowledge refresh](references/live-product-knowledge.md) requires.
 
 ## Finish each session
 

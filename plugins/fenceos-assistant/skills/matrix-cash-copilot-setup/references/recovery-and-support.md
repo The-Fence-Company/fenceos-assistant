@@ -1,6 +1,6 @@
 # Keep setup moving and avoid dead ends
 
-The goal is a complete next-year annual budget and supporting cash plan across a few sessions, targeting 8–10 focused hours without sacrificing material completeness. Start with available records, do the ordinary work, and ask concise questions only where evidence cannot settle a decision. A rehearsal is optional for product evaluation; it is not a prerequisite imposed on each customer.
+The goal is a complete next-year annual budget and supporting cash plan across a few sessions, targeting 8 to 10 focused hours without sacrificing material completeness. Start with available records, do the ordinary work, and ask concise questions only where evidence cannot settle a decision. A rehearsal is optional for product evaluation; it is not a prerequisite imposed on each customer.
 
 ## Bound each blocker
 
@@ -11,6 +11,8 @@ Count a troubleshooting cycle as: inspect the relevant evidence, attempt one jus
 - Stop troubleshooting that blocker after three unsuccessful cycles total or about five minutes of active diagnosis, whichever comes first. Ask earlier when one owner answer would resolve it. A normal known-duration import/build is not a diagnostic loop; report its state without repeated clicking. The user can explicitly authorize a deeper investigation.
 - A new model, browser, refreshed page, conversation, or resumed session does not reset the budget. Persist a stable blocker label, failed cycles, cumulative active diagnostic time, approaches tried, and support-message status in the private checkpoint. If prior counts are unavailable, do not assume a fresh budget; use the prior evidence and ask for the smallest missing fact. After the limit, a reported fix permits a targeted verification of that fix; it does not reset the cumulative budget. Further diagnosis requires explicit user authorization with its additional scope recorded. Continue independent useful setup sections while waiting for an answer. Do not stall the entire task on one optional connection.
 
+An expired product or accounting sign-in is not a diagnostic cycle. Say the session expired, ask the owner to sign in again in the same browser, then re-read business, plan and the change ledger before any further write. Record the time as owner-required waiting. Repeated expiry inside one session is a product fault for the engineering-repair route below.
+
 Never retry an uncertain mutation before inspecting whether it already saved. Never evade a permission denial, switch business to make an action work, invent a financial value, or weaken controls. Escalate those immediately. Do not turn a file-format issue into a custom software project during onboarding. Explain when manual entry is impractical and ask for a better export or support.
 
 ## Bound successful repetitive work too
@@ -19,9 +21,21 @@ Before expanding a repeated-entry or discovery fallback, estimate the number of 
 
 ## Ask for the smallest useful help
 
-Say what is blocked, what is already complete, and one concrete action that can unblock it. For example: "The report preview still cannot identify monthly columns. I tried the supported workbook and checked its header. Can you export the P&L with months as columns, or should I prepare a note for the FOS team? The rest of your setup is saved."
+Say what is blocked, what is already complete, and one concrete action that can unblock it, then keep going. For example: "The report preview still cannot identify monthly columns. I tried the supported workbook and checked its header. Please export the P&L with months as columns when you can; I have drafted a note to the FOS team in case the preview is the problem, and I will send it on your yes. Meanwhile I am continuing with the overhead section, which does not need the import." Do not end the turn on the question alone.
 
 Distinguish business questions for the owner/bookkeeper from product faults or provisioning problems for the FOS team. Do not ask users for tokens, passwords, raw logs, or unfamiliar developer commands. A screenshot request should name the exact safe view and exclude personal financial details where possible.
+
+## Authorized engineering-repair route
+
+When the product itself is at fault (a save that will not persist, a save-error banner, a page that will not load, a control that rejects its documented unit, a session that expires repeatedly) and the bounded recovery above is exhausted, the agent owns the route to a fix. The debrief found developer repair instructions handed to the owner to relay; that never happens again.
+
+1. **Capture evidence yourself.** Record product and page, client and browser, time, the exact action and approved value, expected versus observed result, the sanitized error text, the affected change-ledger rows, and the guide or build identity from the session's knowledge refresh. Take a sanitized screenshot only when it adds something and the owner has authorized it.
+2. **Draft the support request yourself**, using the handoff format in the next section. It goes to the verified FOS support recipient and asks for the engineering fix; it does not ask the owner to run anything.
+3. **Offer to send it with the owner's yes** through their connected account, following the draft-and-send steps below. If no account can send, give the owner the ready-to-copy text and say so. The owner's only job is yes or no on sending.
+4. **Keep working on everything that does not depend on the fix.** Put the blocked rows and their dependents on the checkpoint as blocked with the request's state (drafted / sent / blocked / uncertain) and continue the next independent section.
+5. **Never make the owner relay instructions.** No commands, console steps, cache clearing, repository changes or configuration edits are given to the owner to pass to a developer or to perform. If a fix needs engineering, engineering gets the evidence through the request. When support reports a fix, verify that fix once against the pending rows; a verified fix promotes them, and the cumulative recovery budget does not reset.
+
+Test: in a run with a product fault, the transcript contains no instruction addressed to the owner for someone else to carry out, and the checkpoint shows the evidence capture, the drafted request and its send state.
 
 ## Prepare a useful FOS handoff
 

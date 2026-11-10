@@ -11,7 +11,7 @@ FenceOS stores the BOM catalog and product links, but the primary setup flow now
 - Super Admins can open an organization's settings page and then use **Manage Products & BOM** for that specific organization.
 - FenceOS stores the BOM catalog and product mappings in its own database, per organization.
 - Operator is the place where teams now run **Generate BOM**, **Regenerate BOM**, review the BOM output tabs, and save manual supplement edits.
-- FenceOS provides a **BOM Builder** for safely authoring and publishing the organization-level catalog used by quote generation. Super Admins always have access; an Org Admin can use it only after a Super Admin enables **Allow Org Admins to manage Advanced BOM Catalog** for that organization.
+- FenceOS provides a **BOM Builder** for safely authoring and publishing the organization-level catalog used by quote generation. Super Admins and Org Admins can use it for their own organization.
 
 The products-and-BOM flow has two layers:
 
@@ -26,7 +26,7 @@ The products-and-BOM flow has two layers:
 - In **Advanced Editor → Fence Systems**, open a system to manage its optional **Material Variants**. Add the names that are meaningful for that system—for example Cedar or Treated for wood; White, Tan, Adobe, Maple, Walnut, Green, or Teak for vinyl; Black, Bronze, or Almond for aluminum; and Black or Galvanized for chain-link. A new Fence System starts with no named variants until you add them.
 - Existing Fence Systems that have not adopted a system-owned list continue to show the legacy inferred choices. Adding or removing a choice converts that system to an explicit list. Removing a choice never deletes or rewrites saved assembly recipes or fence-type mappings; an older saved value remains visible as needing review until an admin deliberately updates it. Choose **Use no named variants** only when the system truly should not vary.
 - For a full advanced CSV catalog import, `systems.csv` may include a trailing `variants` column with pipe-separated names such as `White|Tan|Adobe`. Legacy three-column `systems.csv` packets remain accepted and leave those imported systems on legacy inferred choices.
-- In **Organization Settings → Platform setup → Feature rollouts**, a Super Admin can use the **Allow Org Admins to manage Advanced BOM Catalog** checkbox. It is off by default. Org Admins cannot enable it themselves or use it to manage another organization.
+- Org Admins can manage only their own organization's Advanced BOM Catalog. There is no per-company switch for this access.
 
 #### Recipe quantities and review
 

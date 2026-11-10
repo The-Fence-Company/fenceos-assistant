@@ -4,7 +4,7 @@
 
 Use an ordinary conversation, not a questionnaire. Example, adapt to what is known:
 
-"We'll build next year's budget so you can see the sales you need, what your crews and other costs will use, and the profit you are planning for. We'll also check when money is expected to come in and go out. The target is 8–10 focused hours over a few sessions. I'll explain decisions, handle the browser work, and check what saves. You can start with bookkeeping reports, spreadsheets or statements; reports do not need to arrive by email. We'll identify missing items early."
+"We'll build next year's budget so you can see the sales you need, what your crews and other costs will use, and the profit you are planning for. We'll also check when money is expected to come in and go out. The target is 8 to 10 focused hours over a few sessions. I'll explain decisions, handle the browser work, and check what saves. You can start with bookkeeping reports, spreadsheets or statements; reports do not need to arrive by email. We'll identify missing items early."
 
 Then recommend the next calendar or fiscal year and confirm it, rather than asking an unexplained year question. For example, in late 2026 a calendar-year business normally plans 2027. This is an example, not a permanent year. Respect the owner's already-selected period. Confirm the fiscal boundary if unknown before mapping months. Confirm the exact business and ask where records currently live. Do not ask for information already supplied.
 

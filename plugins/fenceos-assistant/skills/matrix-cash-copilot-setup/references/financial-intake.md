@@ -34,6 +34,8 @@ Maintain one table populated from evidence before asking for missing answers. As
 | Starting cash | Included accounts, dated balance, cleared payments already reflected, pending payments still to forecast |
 | Role costs and overhead | Detailed expenses and every installation/noninstallation role; approved cost classification and no overlap |
 | Pay | Gross versus net, owner wages versus distributions, pay dates and work periods, fixed-per-run versus monthly/annual budget allocation, commissions, bonus amount and eligibility threshold |
+| Commission placement | Whether commission is a direct selling cost (COGS) or overhead in this business's books, its rate basis, and the one Matrix field and one Cash Copilot source that will carry it |
+| Current operating assumptions | For each cost line that will be annualized or carried forward: vendor still active, one-time credits or refunds, start or stop month, and whether a loan line mixes principal and interest |
 | Payroll deductions | Employee withholding, employer taxes/benefits, remittance dates, and which figures already include each component |
 | Card settlement | Charges versus payments, statement/due dates, whether a payment already reduced the cash anchor |
 | Debt | Payment amount, dates, principal/interest split and evidence for any rate; distinguish zero from unknown |
@@ -72,6 +74,32 @@ Do not adopt sample industry percentages, a 15% profit goal, 2,080 working hours
 Assign each cash obligation to one forecast source. Cross-check AP, recurring outflows, credit-card payments, itemized debt, unallocated debt, labor estimate, salaries, commissions, and manual adjustments. An expense in Matrix and a payment in Cash Copilot serve different views; the duplication concern is multiple cash entries for the same event inside the forecast.
 
 Do not classify loan proceeds or transfers as revenue. Principal repayments, owner distributions, and noncash expenses need separate treatment from operating expenses and profit. Ask for the actual treatment when evidence is unclear. Do not count a deposit already included in starting cash as a new future inflow. Do not add expected receivables on top of goals when both represent the same collection.
+
+## One complete expense calculation
+
+Build total planned expense once, from the detailed inputs, and derive every summary from it. The debrief found a summary profit that omitted costs the detailed COGS tab carried; that is a reconciliation failure, not a display quirk, and it blocks reliance on both figures until explained.
+
+- The complete list is direct costs (materials, subcontractors, equipment, field labor and burden), compensation and bonuses, overhead, commission, interest and depreciation, each present exactly once. Profit is revenue minus that list. If a product summary shows a different profit, trace which lines it includes and record the variance and its cause before using either number.
+- **Commission is placed once.** Decide with the owner and bookkeeper whether it is a direct selling cost or overhead, record the choice in the decision table, and carry it in exactly one Matrix field. In Cash Copilot it is one forecast source, not a Settings rate plus a recurring rule plus a manual line. If the books treat it one way and the owner wants to see it another, keep the books' treatment and note the presentation difference.
+- **Debt is three things.** Principal repayment is cash out and not an expense; interest is an expense; depreciation is an expense that is not cash. A loan line in a P&L can mix principal and interest, so ask for the amortization or lender statement before annualizing it. Reconcile the Matrix Loans or overhead entry, the Cash Copilot Debt Service entry and the bookkeeping treatment to each other so no component is counted twice or dropped. Distinguish zero interest from unknown interest.
+- **Profit to cash is a bridge, not a surprise.** Explain to the owner that planned profit less principal payments, owner distributions and equipment purchases, plus depreciation, approximates the cash the plan leaves; a profitable plan can still show a cash shortfall. Use the bridge to explain Cash Copilot's forecast, not to force either product to agree.
+- **Moving a cost between overhead and COGS changes presentation, not total expense.** Gross margin, the Magic Number and the overhead percentage move; total expense and profit do not. Say this plainly when an owner asks whether to reclassify, and do not present a reclassification as a saving.
+
+Test: recompute annual total expense from the detailed tabs and compare it with every summary that shows profit or margin; the difference is zero or explained rounding, and commission and each debt component appear in exactly one place.
+
+## Current operating assumptions before annualizing
+
+A prior year, a partial year or a trailing twelve months is a starting point, not a plan, until the owner's current operating assumptions are applied. Before annualizing historical spending or carrying a line forward, ask and record:
+
+- Vendors, subscriptions or leases cancelled since the period, and new ones added.
+- One-time credits, refunds, insurance proceeds or settlements inside the period that will not recur.
+- Costs that started or stopped mid-period, so twelve months of spend is more or less than the period shows.
+- Loan or lease lines that mix principal and interest, and lines that mix owner distributions with wages.
+- Known price, rent, headcount or insurance changes already decided for the plan year.
+
+Adjust each affected line per the approved assumption, label the result modeled, keep the source value beside it, and give it a current-assumption status in the decision table. Annualize a partial year only with an owner-approved assumption about the missing months; never annualize a month that includes a one-time item without removing it first.
+
+Test: every annualized or carried-forward line in the decision table has a current-assumption status; no partial-year line is annualized without an owner-approved assumption recorded beside it.
 
 ## The reviewable setup manifest
 

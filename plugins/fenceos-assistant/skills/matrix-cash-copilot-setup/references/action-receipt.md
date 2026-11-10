@@ -9,7 +9,7 @@ For each meaningful financial batch/import/conversion, maintain one private rece
 | Before | Relevant existing values, source ownership, record IDs when exposed, backup/recovery |
 | Approval | User authorization basis/date or message reference, exact data/destination/write set, unresolved sections and any tool-required action-time approval |
 | Expected | Counts, amounts, dates and totals, including intentional differences |
-| Outcome | Not started / Applied / Partial / Uncertain / Blocked; readback IDs/counts/totals and discrepancies |
+| Outcome | Not started / Entered / Persisted / Reconciled / Partial / Uncertain / Blocked; reload time and readback IDs/counts/totals and discrepancies. Applied means persisted and read back, never merely entered |
 | Dependencies | Which downstream goals, costs or forecasts require this result |
 | Resume | Next safe action and what must be revalidated |
 

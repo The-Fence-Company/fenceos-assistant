@@ -2,7 +2,7 @@
 
 FenceOS Assistant helps a fence company set up products, prices and bills of materials through its signed-in browser. An optional finance module helps with Matrix budgets and Cash Copilot plans when you request it. You sign in, confirm the business and approve each exact batch before it changes anything.
 
-This package is **Assistant 0.2.4**, with **FenceOS setup 0.6.2** and **Matrix / Cash Copilot setup 3.1**. Verify these versions in your installed copy and start a new session after updating.
+This package is **Assistant 0.2.6**, with **FenceOS setup 0.7.0** and **Matrix / Cash Copilot setup 3.2**. Verify these versions in your installed copy and start a new session after updating.
 
 This GitHub package is distributed separately from OpenAI's official directory. Official directory review and clean Windows/client browser acceptance remain unverified. Confirm the actual reviewed public release commit before installing.
 
@@ -17,14 +17,14 @@ One marketplace, `fenceos`, contains one plugin, `fenceos-assistant`, and two in
 
 | Skill | Use it for |
 | --- | --- |
-| `fenceos-setup` 0.6.2 | Getting started, products, gates, add-ons, supplier costs, BOM recipes, mappings and locations. Owner-approved test quotes check only the tested quantities. |
-| `matrix-cash-copilot-setup` 3.1 | Explicit annual-budget or cash-plan requests, with separate business, host, plan, period and data approval. |
+| `fenceos-setup` 0.7.0 | Getting started, products, gates, add-ons, supplier costs, BOM recipes, mappings and locations. Owner-approved test quotes check only the tested quantities. |
+| `matrix-cash-copilot-setup` 3.2 | Explicit annual-budget or cash-plan requests, with separate business, host, plan, period and data approval. |
 
 ## Optional finance planning
 
 Say **“Use Matrix and Cash Copilot setup to help me plan next year's budget. Start by confirming the business, planning period and available records; prepare the proposed changes before entering any live fields.”**
 
-Matrix builds the annual revenue, cost and profit budget; Cash Copilot supports dated cash planning. The module confirms account and email scope, obtains exact batch approval before autosaving inputs, and reports Saved, Reconciled and Ready separately for each product. Its 8–10 focused-hour target is a design target, not a universal completion promise.
+Matrix builds the annual revenue, cost and profit budget; Cash Copilot supports dated cash planning. The module confirms account and email scope, obtains exact batch approval before autosaving inputs, and reports Saved, Reconciled and Ready separately for each product. It says "saved" only after a reload shows the value, keeps every approved change in a ledger until it is read back, builds one complete expense calculation with commission placed once and debt split into principal, interest and depreciation, asks for your current operating assumptions before annualizing history, and when the product itself fails it drafts the support request and offers to send it with your yes rather than handing you instructions to relay. Its 8 to 10 focused-hour target is a design target, not a universal completion promise.
 
 Installing the package does not start finance during FenceOS setup, enable Cash, provision or connect accounts, import financial data, publish rates or authorize a financial batch. Budget setup does not mark paid/received, change real due dates or modify bookkeeping/payroll records. Finance readiness never proves FenceOS catalog coverage or test-quote BOM correctness. Customer records and private checkpoints stay outside the reusable package.
 

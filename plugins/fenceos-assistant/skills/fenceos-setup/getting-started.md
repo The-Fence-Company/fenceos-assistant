@@ -1,6 +1,6 @@
 # Getting started mode
 
-Read this file when the user is new, asks what the assistant can do or where to begin, or the request is unclear. The front page ([SKILL.md](SKILL.md)) has already signed the user in, confirmed the company, and recorded the session notes. This mode changes nothing. It looks at the account, reports what is there, suggests the next step, and moves straight into [catalog setup](catalog-setup.md) when the user picks one.
+Read this file when the user is new, asks what the assistant can do or where to begin, or the request is unclear. The front page ([SKILL.md](SKILL.md)) has already signed the user in, confirmed the company, and recorded the session notes. This mode changes nothing. It looks at the account, reports what is there, places the company on the setup path (section 3 of [SKILL.md](SKILL.md)), and starts the first incomplete step in the same conversation.
 
 ## 1. Look around, read-only
 
@@ -27,7 +27,8 @@ Keep it short. Put anything the user said did not work at the top. Then a table:
 **What the assistant can do in this version**
 
 - **Set up the catalog.** Fence types, gates, add-ons, prices, descriptions, and photos; supplier material costs from a price sheet or from supplier invoices in their email; BOM recipes; the fence type mapping; location availability. One fence family at a time, with the user approving each batch before it is saved. It checks base costs and the margin at every height against the BOM, finds what the BOM does not cover, and can prove the work with a test quote.
-- **Tidy settings and turn on the online estimator** by following the screens, with the user approving each change.
+- **Set up the company and quote settings** on Org Settings: branding, locations, deposit schedule, terms, scope and warranty text, company documents, reviews and Google rating, email settings, tax rates, financing, stain and removal defaults. It reads the payment processor status and says who connects it. Reference: [company settings](references/company-settings.md).
+- **Turn on the online estimator** per location, with the gate links checked, and walk through one estimate without submitting it.
 - **Answer questions about any screen** using the **Learning Center** and the question-mark help on each page.
 
 **What it does not do in this version**
@@ -37,21 +38,13 @@ Keep it short. Put anything the user said did not work at the top. Then a table:
 - Changing roles or permissions, accepting quotes, taking payments, or working around a missing permission.
 - Signing in for the user or storing a password.
 
-## 3. Suggest an order
+## 3. Place them on the path
 
-For a company starting from an empty or template-only catalog:
-
-1. **Locations.** Confirm each physical location exists, because products and the online estimator attach to a location.
-2. **Products.** On the fast track, every fence type, gate, and add-on with a price, cost, description, and photo, so they can quote today. On the full build, start with step 3.
-3. **One fence family's material list**, if they have Operator. Pick the family they sell most, then check it with a test quote before the next family.
-4. **Remaining families**, one at a time.
-5. **Online estimator.** Needs the catalog, a location, and a notification email for phone-only estimates.
-
-For a company that already has a catalog, start at whichever step the look-around showed is incomplete. Recommend one step and ask whether to start there.
+Use the setup path in section 3 of [SKILL.md](SKILL.md). From the look-around, mark each step done, provisional, blocked, or not started, show the setup board, and name the first incomplete step as next with a time estimate. Do not ask which step they would like. Say which one is next and why, and start it unless they object. A company starting from an empty or template-only catalog begins at step 1; a company that already has a catalog usually resumes at step 3, 5, or 7. On the full build, step 2's prices come after step 7's material list; say so on the board.
 
 ## 4. Move into the work
 
-When the user says yes to a step, or names something to do, open [catalog setup](catalog-setup.md) and continue in the same conversation. Carry over what this mode found so the user is not asked again. Do not tell the user to start anything else.
+Start the next step at once: open [catalog setup](catalog-setup.md) or [company settings](references/company-settings.md) and continue in the same conversation. Carry over what this mode found so the user is not asked again. Do not tell the user to start anything else, and do not end the turn with an offer; end it with the step under way.
 
 If the user is not sure what to ask, offer two or three of these:
 

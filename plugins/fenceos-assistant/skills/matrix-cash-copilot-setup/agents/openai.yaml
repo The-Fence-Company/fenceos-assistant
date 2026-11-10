@@ -1,4 +1,4 @@
 interface:
   display_name: "Matrix and Cash Copilot Setup"
   short_description: "Build and verify annual budgets and supporting cash plans"
-  default_prompt: "Use $matrix-cash-copilot-setup to help me complete next year's budget across a few sessions, targeting 8–10 focused hours. Explain the decisions, handle the browser work, and verify the saved plan."
+  default_prompt: "Use $matrix-cash-copilot-setup to help me complete next year's budget across a few sessions, targeting 8 to 10 focused hours. Explain the decisions, handle the browser work, and verify the saved plan."

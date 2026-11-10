@@ -41,6 +41,27 @@ Gather these from the user in writing. Do not invent any of them.
 
 Everything else comes from the screens. Do not ask the user to describe the catalog.
 
+### Say the pricing rules first
+
+Before the first price is typed, tell the owner these once, in plain words, because each one changed a decision late in a real setup:
+
+- One price per section and one Base Cost per section cover every height a fence type offers. A quote line is sections times price, whatever height is drawn.
+- Changing a section length, a rounding rule, a labor rate, or a margin re-prices every product built on it. You will show the whole set before saving.
+- A gate or fence form needs a cost before **Margin (%)** works; a zero cost disables it. A placeholder cost must be replaced in the same run and is marked provisional until it is.
+- Stored prices and costs never recalculate when material costs change. The base cost check is how drift gets caught.
+- A margin edit changes the catalog price only. Saved quotes keep their numbers until they are re-saved.
+- Online estimator gate prices come from the mapped gate product; an unmapped gate shows **Price confirmed onsite** and adds $0.
+
+### Pricing decision sheet
+
+Keep one sheet for the run, in the session notes, and read it before asking any pricing question. It is the single place where a price decision lives, so a changed input is applied everywhere and an answered question is never asked again after a resume.
+
+| Product | Current price / cost | Proposed price / cost | Inputs | Basis | Rounding | Affected by | Status |
+|---|---|---|---|---|---|---|---|
+| name and ID | as read from the form, with the time read | the proposal | materials per section, labor rule, margin, source of each | cost plus margin, or owner's price, or rule of thumb | the owner's rule | which shared inputs move this row | proposed, approved, entered, saved (read back), verified |
+
+When the owner changes one input, update the sheet first, mark every affected row proposed again, and build the next batch from it. The receipt carries the final sheet.
+
 ## 3. Phased runbook
 
 Each phase ends with a saved state that you reopen on screen and compare with the approved batch. Do not start the next phase with an unsaved draft or an unverified save. Present each phase's batch (section 5) and get a yes before touching the UI.
@@ -79,7 +100,7 @@ Reference: [recipes](references/recipes.md).
 5. **Round up to package** needs a positive package size. Do not leave productless placeholder rows.
 6. Run the guided review with the labeled sample drawing. Compare the resulting quantities with the customer's expected quantities. A difference is a blocker, not a note.
 7. Present the batch, get approval, then publish through **Review catalog and mappings** and **Confirm catalog and mappings publish** so catalog and mappings store together. Advanced Editor's **Review & Publish** can drop mappings; use it only when the user explicitly chooses expert repair.
-8. If FenceOS asks for **Re-run Preview** because another window changed the catalog, stop, report the conflict, and prepare a new review. Do not retry on your own.
+8. If FenceOS asks for **Re-run Preview** because another window changed the catalog, stop, report the conflict, and prepare a new review. Do not retry on your own. **Publishing and revisions** in [verification](references/verification.md) says exactly what FenceOS protects here and what it does not.
 9. After publish, note the row counts, the "mappings preserved or dropped" line, and catalog revision/generation when shown. Record this as **published** and run the [coverage check](references/coverage-check.md). Counts alone do not prove usable materials, verified quantities, or a working saved quote BOM. Publication does not refresh historical snapshots.
 
 ### Phase D. Sellable fence type and gates
@@ -90,7 +111,7 @@ Reference: [products](references/products.md).
 2. Enter heights in feet (section 4), base cost per section including materials and direct labor, and price or margin. Do not include stain, gates, add-ons, or commission in the base cost.
 3. **Base cost check.** Before the save, work out the BOM materials for one typical section from the recipes and product costs on screen and compare it with the Base Cost per Section going in. Reference: [base cost check](references/base-cost-check.md). FenceOS does not make this comparison itself. The fence type and the BOM never share a number, so a Base Cost typed months ago keeps driving quote margin and commission after the recipes or material costs change. Flag every fence type or gate whose Base Cost is below its BOM materials alone, show the implied labor allowance for the rest, and put the user's decision on each flagged row in the batch. Never raise or lower a Base Cost without that decision. Do the check for existing products too when the run edits them, and say so when BOM Setup is unavailable and the check cannot be done.
    **Check every height.** A fence type has one price and one Base Cost per section for all its heights, and the quote ignores height. Work out the margin at each height the product offers and show the spread. When a height cannot sell at the shared price, offer the choices in [field lessons](references/field-lessons.md) (accept it, split it into its own fence type, or move it to a **Price at quote** product).
-   **Read the current value before proposing a change.** Someone else may have changed it since your last read. Say plainly when a proposal lowers a price. When the owner changes one input, re-price every product it touches in the same batch.
+   **Read the current value before proposing a change.** Someone else may have changed it since your last read. Say plainly when a proposal lowers a price. When the owner changes one input, update the pricing decision sheet first and re-price every product it touches in the same batch.
 4. For each fence type shown online, map the exact **Single gate product** and **Double gate product** under Online estimator gate pricing. Never guess a mapping from names.
 5. Save, reopen the product, and compare every field with the batch, including the base cost decision. If the form stays open or shows an error, it did not save: retry once, then read it back. Never report a save you have not read back.
 
@@ -135,7 +156,7 @@ Present one table per phase. Approval applies to this exact table; any change to
 
 | Action | Record | Field | Current | Proposed | Unit | Source | Status |
 |---|---|---|---|---|---|---|---|
-| create, update, or skip | name and ID when shown | field name | value or blank | value | unit | supplier file and row, or user instruction | ready, held, or conflict |
+| create, update, or skip | name and ID when shown | field name | value or blank | value | unit | supplier file and row, or user instruction | before the save: ready, held, or conflict; after it: entered, saved (read back), or verified |
 
 Below the table list unresolved rows and why each is held, the new records the batch will create, the locations affected, and the recovery path from section 7 for this phase.
 
@@ -150,6 +171,7 @@ Scope: family, heights, variants, gates, locations
 Phases completed:
 Requested vs saved: counts per phase, with IDs where the screen shows them
 Price sources: the supplier file, or the invoice number and date behind each price, and any price that is stale or from before a price increase
+Pricing decision sheet: the final rows, or where the owner saved it
 Skipped or held rows: with reasons
 Conflicts: other-editor or revision conflicts, left unmodified
 Verified on screen: units, costs, prices, mappings, availability, heights, variants, coverage
@@ -223,3 +245,4 @@ Snapshots from the FenceOS User Guide, except where marked hand-written. The liv
 - [coverage check](references/coverage-check.md) for comparing what Products sells with what the BOM covers, and answering "how is my BOM doing?". Hand-written.
 - [test quote](references/test-quote.md) for proving prices and material lists with a saved, owner-approved test quote, including handing the test to a second agent. Hand-written.
 - [supplier invoices](references/supplier-invoices.md) for finding current prices in supplier invoices and quotes in the user's email. Hand-written.
+- [company settings](references/company-settings.md) for Org Settings, Quote Experience, payment processor status, and the online estimator. Hand-written.

@@ -1,6 +1,6 @@
 {
   "name": "fenceos-assistant",
-  "version": "0.2.4",
+  "version": "0.2.6",
   "description": "Browser-guided FenceOS catalog and BOM setup, plus optional Matrix budgeting and Cash Copilot planning when requested. Each workflow requires its own business context and exact batch approval.",
   "author": {
     "name": "FenceOS Engineering",

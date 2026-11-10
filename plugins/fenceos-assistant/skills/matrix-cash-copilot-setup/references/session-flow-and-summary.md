@@ -4,11 +4,11 @@
 
 | Session | Target time | Finish line |
 | --- | --- | --- |
-| 1: Understand and gather | 2–3 hours | Confirm next-year scope, source inventory, initial revenue/cost baseline, known capability gaps and precise requests |
-| 2: Build and decide | 3–4 hours | Complete annual draft: monthly revenue, capacity, direct costs, compensation, overhead and financing assumptions; supporting cash plan |
-| 3: Verify and hand over | 2–3 hours | Resolve material gaps, verify saved budget and cash coverage, explain scenarios, export and maintenance |
+| 1: Understand and gather | 2 to 3 hours | Confirm next-year scope, source inventory, initial revenue/cost baseline, known capability gaps and precise requests |
+| 2: Build and decide | 3 to 4 hours | Complete annual draft: monthly revenue, capacity, direct costs, compensation, overhead and financing assumptions; supporting cash plan |
+| 3: Verify and hand over | 2 to 3 hours | Resolve material gaps, verify saved budget and cash coverage, explain scenarios, export and maintenance |
 
-Choose a time allocation totaling 8–10 hours; the ranges are flexible, not an instruction to use their combined maximum. Track focused elapsed working time across sessions without counting concurrent agent and owner minutes twice. Record owner-required time and external waiting separately. Waiting for a bookkeeper or access can extend calendar time. Never reset spent time on resume. At milestones report time used, concrete remaining work and a revised estimate. If the target is at risk, identify the cause early and agree a narrower session deliverable; do not silently reduce completeness or treat 10 hours as an automatic stop.
+Choose a time allocation totaling 8 to 10 hours; the ranges are flexible, not an instruction to use their combined maximum. Track focused elapsed working time across sessions without counting concurrent agent and owner minutes twice. Record owner-required time and external waiting separately. Waiting for a bookkeeper or access can extend calendar time. Never reset spent time on resume. At milestones report time used, concrete remaining work and a revised estimate. If the target is at risk, identify the cause early and agree a narrower session deliverable; do not silently reduce completeness or treat 10 hours as an automatic stop.
 
 Do not fill the owner's time with technical discovery. Estimate a repetitive batch before expanding it: record count, effort and ongoing maintenance. If it threatens the agreed session budget, present a supported alternative or a smaller slice first. Maintain the cumulative per-blocker retry limit separately.
 
@@ -27,7 +27,9 @@ All of these are needed for **READY for annual planning**:
 
 Cash Copilot has a **separate readiness** decision: confirmed dated cash, complete relevant obligations/collections, no duplicate events, correct dates/units, tested forecast arithmetic and explicit coverage/override expiry. If it cannot cover the full planning year, state the supported range. A ready annual Matrix budget can coexist with partial cash setup; the combined setup is not fully complete until all agreed required deliverables pass. Do not force an unverified cash plan just to finish Matrix. Evaluate cash against the agreed coverage, not an invented full-year requirement: if the owner requested only three weeks and those weeks are complete, reconciled and saved, Cash Copilot can be ready for that three-week use. State the limit without creating an extra completion blocker.
 
-## Three evidence states
+## Four change states, then three evidence states
+
+Every approved change has one of four states, and the word used with the owner follows the state: **approved** (the owner's yes on the exact batch), **entered** (typed or selected in the live control), **persisted** (a reload or reopen of the same business and plan shows the value), **reconciled** (the persisted value matches the approved batch and its evidence). "Saved" is the word for persisted and nothing earlier. A save-error banner, a form that stays open, a status that never reaches saved, or a value that reverts on reload leaves the change at entered and **pending**; a cancelled edit followed by a failed save is pending, not withdrawn and not done. A later summary never promotes a pending change. Section-level Saved below is yes only when every change in that section is persisted; the debrief's three reverted saves were reported as saved because this check was taken on trust.
 
 For each major output record: **Saved** (yes/no/uncertain), **Reconciled** (yes/partial/no with basis), **Ready for stated use** (yes/partial/blocked). A complete future budget can be **Reconciled: yes, to approved planning assumptions** even without historical actuals. Do not downgrade reconciliation merely because projections are not history or capacity has no cushion; explain those planning facts and resolve any actual material gap. Product Saved and Ready may still be no. Never promote a rename test to financial verification. Identify dependencies of a disputed value; block affected conclusions and writes while continuing independent work. A negative profit or cash shortfall is a planning finding to discuss, not a number to conceal or a reason to force the chart green.
 
@@ -40,6 +42,7 @@ Keep a short current summary; detailed source/action ledgers live separately in 
 - Annual budget and cash readiness, with Saved/Reconciled/Ready evidence for each affected section.
 - Confirmed decisions, approved assumptions, provisional/missing inputs; provenance and superseded values.
 - Completed batch receipts and uncertain outcomes; available record IDs, counts/totals and before/after evidence.
+- Change ledger: one row per approved change with field or control, approved value, state (approved / entered / persisted / reconciled / pending / withdrawn), the reload time that proved persistence, and the product's exact save-error text when one appeared. Pending rows stay listed until a reload shows the final value; a cancellation followed by a failed save stays pending. Rows the owner withdrew keep the superseded value for the record.
 - Open items: exact record/question, why needed, responsible person, next action; include the copyable bookkeeper request when records are pending.
 - Blocker ledger: stable label, cumulative cycles/time, approaches tried, support send/draft/uncertain receipt. Never resend automatically.
 - Coverage: source ownership, conversion IDs, holiday dates, overrides/expiry and replacement owner.
@@ -51,4 +54,4 @@ Use a private downloadable file and a working link. If file tools are absent, gi
 
 ## Resume
 
-Read the checkpoint first; confirm business/plan and current affected state, refresh public knowledge, and revalidate time-sensitive balances, dates and file versions. Preserve completed work. If source/state/scope changed, supersede dependent calculations and revise only the affected proposed batch/authorization. If the blocker ledger is missing, do not assume the full retry budget is unused. Report the evidence gap and ask for the smallest useful fact.
+Read the checkpoint first; confirm business/plan and current affected state, refresh public knowledge, and revalidate time-sensitive balances, dates and file versions. Re-read every pending or entered row of the change ledger against the live page before anything else; a value that now shows is promoted to persisted with the new reload time, and one that does not stays pending. Preserve completed work. If source/state/scope changed, supersede dependent calculations and revise only the affected proposed batch/authorization. If the blocker ledger is missing, do not assume the full retry budget is unused. Report the evidence gap and ask for the smallest useful fact.

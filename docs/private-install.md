@@ -1,6 +1,6 @@
 # Use FenceOS Assistant with ChatGPT or Claude
 
-Package guide: Assistant **0.2.4**, FenceOS setup **0.6.2**, optional Matrix / Cash Copilot setup **3.1**. Verify the installed versions before starting. Client documentation reviewed November 4, 2026; source compatibility is not proof of a fresh install or browser session.
+Package guide: Assistant **0.2.6**, FenceOS setup **0.7.0**, optional Matrix / Cash Copilot setup **3.2**. Verify the installed versions before starting. Client documentation reviewed November 4, 2026; source compatibility is not proof of a fresh install or browser session.
 
 For GitHub installation, choose the reviewed public commit carrying the versions above. OpenAI directory availability and Windows acceptance are separately qualified; this guide is not proof of either.
 
@@ -92,7 +92,7 @@ If installation or a call fails, send support your company name, the time and th
 
 ## Updates, packages and rollback
 
-Use the supported marketplace update control, start a new session, and verify **Assistant 0.2.4 / setup 0.6.2 / finance 3.1** in the installed copy. A publisher records the actual public commit in the release receipt; only pin a Git route to that reviewed available commit. A local folder or copied skill does not acquire an update URL or automatic refresh: replace the complete reviewed folder/package through its supported route and retain the private checkpoint separately.
+Use the supported marketplace update control, start a new session, and verify **Assistant 0.2.6 / setup 0.7.0 / finance 3.2** in the installed copy. A publisher records the actual public commit in the release receipt; only pin a Git route to that reviewed available commit. A local folder or copied skill does not acquire an update URL or automatic refresh: replace the complete reviewed folder/package through its supported route and retain the private checkpoint separately.
 
 `fenceos-assistant.zip` contains the marketplace folder and both marketplace formats. Extract it before registering a local marketplace. `fenceos-assistant-plugin.zip` contains only the plugin, both manifests at the archive root and both skills, for clients that actually offer plugin upload. A GitHub source archive or a ZIP attached to chat is not evidence of installation.
 
@@ -104,7 +104,7 @@ For FenceOS setup, say **“Help me get set up in FenceOS. Start with a read-onl
 
 Expect one yes per exact batch, then a readback. Organization BOM reset/backfill, sold jobs, accepted terms, automatic recomputation and payments remain outside setup. Published catalog, coverage, guided quantities and saved test-quote BOM are separate results; a new test does not prove an old job recovered.
 
-For finance only when requested, say **“Use Matrix and Cash Copilot setup to help me plan next year's budget. Confirm the business, planning period and records, and prepare the proposed changes before entering live fields.”** The assistant supplies the Matrix sign-in destination, checks actual account capabilities and obtains exact business/host/plan/period, source and account/email scope. It needs batch approval before the first autosaving keystroke. It cannot enable Cash, provision accounts, mark paid/received, change real due dates or authorize rate publication as part of setup. Saved, Reconciled and Ready are separate finance results and never substitute for catalog/BOM proof. The 8–10-hour planning target is not a tested universal promise. General FenceOS setup does not prompt for or start finance.
+For finance only when requested, say **“Use Matrix and Cash Copilot setup to help me plan next year's budget. Confirm the business, planning period and records, and prepare the proposed changes before entering live fields.”** The assistant supplies the Matrix sign-in destination, checks actual account capabilities and obtains exact business/host/plan/period, source and account/email scope. It needs batch approval before the first autosaving keystroke. It cannot enable Cash, provision accounts, mark paid/received, change real due dates or authorize rate publication as part of setup. Saved, Reconciled and Ready are separate finance results and never substitute for catalog/BOM proof. The 8 to 10 hour planning target is not a tested universal promise. General FenceOS setup does not prompt for or start finance.
 
 For a 429 or stale/empty FenceOS page, honor its retry time and reload at most once when no unsaved draft would be lost. Confirm the company again. If it still fails, stop with the time and safe visible error. Use the skill's role-specific navigation; do not infer an empty catalog or missing access. Financial guides and enabled controls must be checked in an authorized session before financial capabilities are treated as available.
 
