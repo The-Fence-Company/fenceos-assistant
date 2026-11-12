@@ -1,6 +1,6 @@
 {
   "name": "fenceos-assistant",
-  "version": "0.2.7",
+  "version": "0.3.2",
   "description": "Browser-guided FenceOS catalog and BOM setup, plus optional Matrix budgeting and Cash Copilot planning when requested. Each workflow requires its own business context and exact batch approval.",
   "author": {
     "name": "FenceOS Engineering",
@@ -22,13 +22,14 @@
   "interface": {
     "displayName": "FenceOS Assistant",
     "shortDescription": "FenceOS catalog and BOM setup",
-    "longDescription": "One plugin, two independent skills. FenceOS setup covers getting started, catalog and BOM work. Explicit budget or cash-plan requests use Matrix and Cash Copilot setup. Installing the package does not start finance, enable products, connect accounts or authorize data imports or writes. Each workflow verifies its own business, browser capability and approvals; finance readiness and BOM proof stay separate.",
+    "longDescription": "One plugin, two independent skills and one optional read-only connector. FenceOS setup covers getting started, catalog and BOM work. Explicit budget or cash-plan requests use Matrix and Cash Copilot setup. Installing the package does not start finance, enable products, connect accounts or authorize data imports or writes. Each workflow verifies its own business, browser capability and approvals; finance readiness and BOM proof stay separate. The optional FenceOS Intelligence connector lets an Org Admin or Super Admin with a personal grant, in an enabled company on the full product, ask for saved company figures such as quotes, pipeline and booked quote margin, and read recent customer conversations with phone numbers and email addresses masked. It signs in through FenceOS, shows that admin's own company only and cannot change anything.",
     "developerName": "FenceOS Engineering",
     "category": "Productivity",
     "capabilities": [
       "Getting started walkthrough",
       "Catalog and BOM setup",
-      "Optional Matrix budget and Cash Copilot planning"
+      "Optional Matrix budget and Cash Copilot planning",
+      "Read-only company figures and conversations for admins (optional connector)"
     ],
     "defaultPrompt": [
       "Help me get set up in FenceOS.",
@@ -37,6 +38,9 @@
     ],
     "composerIcon": "./assets/fenceos-icon.png",
     "logo": "./assets/fenceos-icon.png",
-    "websiteURL": "https://github.com/The-Fence-Company/fenceos-assistant"
+    "websiteURL": "https://github.com/The-Fence-Company/fenceos-assistant",
+    "supportURL": "https://estimate.thefencecompany.com/support",
+    "privacyPolicyURL": "https://estimate.thefencecompany.com/legal/privacy",
+    "termsOfServiceURL": "https://estimate.thefencecompany.com/legal/terms"
   }
 }

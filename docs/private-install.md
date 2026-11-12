@@ -1,6 +1,6 @@
 # Use FenceOS Assistant with ChatGPT or Claude
 
-Package guide: Assistant **0.2.7**, FenceOS setup **0.7.1**, optional Matrix / Cash Copilot setup **3.2**. Verify the installed versions before starting. Client documentation reviewed November 4, 2026; source compatibility is not proof of a fresh install or browser session.
+Package guide: Assistant **0.3.2**, FenceOS setup **0.7.3**, optional Matrix / Cash Copilot setup **3.3**. Verify the installed versions before starting. Client documentation reviewed November 4, 2026; source compatibility is not proof of a fresh install or browser session.
 
 For GitHub installation, choose the reviewed public commit carrying the versions above. OpenAI directory availability and Windows acceptance are separately qualified; this guide is not proof of either.
 
@@ -49,6 +49,8 @@ The skills are `/fenceos-assistant:fenceos-setup` and `/fenceos-assistant:matrix
 
 **Check eligibility first.** Use your own approved FenceOS account and company. Keep an existing correct connection rather than creating duplicates.
 
+A copy installed from OpenAI's plugin directory, once it is listed there, already lists this connector with the plugin, so connect it when prompted instead of adding a custom server. Only an Org Admin or Super Admin of an enabled company can complete the sign-in.
+
 Server URL:
 
 ```text
@@ -82,7 +84,7 @@ Your plan and workspace must allow custom MCP creation. No Free or Go availabili
 
 ## Data sharing, disconnect and support
 
-Intelligence sends approved company metrics and bounded summaries to the AI provider when its tools run. The client sends the request arguments and context needed for those calls to FenceOS, subject to its notices. Connect only if your company permits that sharing. Never paste passwords, cookies, sign-in codes or tokens into a chat or support message.
+Intelligence sends approved company metrics and bounded summaries to the AI provider when its tools run. Its three conversation tools also send contact display names and message text from recent customer conversations, with phone numbers and email addresses masked where the connector detects them. The client sends the request arguments and context needed for those calls to FenceOS, subject to its notices. Connect only if your company permits that sharing. Never paste passwords, cookies, sign-in codes or tokens into a chat or support message.
 
 To stop access, open [FenceOS Intelligence setup](https://estimate.thefencecompany.com/intelligence/connect) and disconnect the specific client connection. Disconnect it in that client's settings as well if needed. Claude and ChatGPT connections are separate. Disconnecting does not delete old conversations.
 
@@ -92,7 +94,9 @@ If installation or a call fails, send support your company name, the time and th
 
 ## Updates, packages and rollback
 
-Use the supported marketplace update control, start a new session, and verify **Assistant 0.2.7 / setup 0.7.1 / finance 3.2** in the installed copy. A publisher records the actual public commit in the release receipt; only pin a Git route to that reviewed available commit. A local folder or copied skill does not acquire an update URL or automatic refresh: replace the complete reviewed folder/package through its supported route and retain the private checkpoint separately.
+When either skill starts, the assistant checks once whether a newer FenceOS Assistant has been published. It reads only the version number from the public plugin file on GitHub and sends nothing about you or your company. If a newer version is out, it tells you which version you have, which is available and how to update in your app, then keeps working unless you ask it to wait. If the check cannot run, it says nothing and carries on. It never installs an update without your yes.
+
+Use the supported marketplace update control, start a new session, and verify **Assistant 0.3.2 / setup 0.7.3 / finance 3.3** in the installed copy. A publisher records the actual public commit in the release receipt; only pin a Git route to that reviewed available commit. A local folder or copied skill does not acquire an update URL or automatic refresh: replace the complete reviewed folder/package through its supported route and retain the private checkpoint separately.
 
 `fenceos-assistant.zip` contains the marketplace folder and both marketplace formats. Extract it before registering a local marketplace. `fenceos-assistant-plugin.zip` contains only the plugin, both manifests at the archive root and both skills, for clients that actually offer plugin upload. A GitHub source archive or a ZIP attached to chat is not evidence of installation.
 
