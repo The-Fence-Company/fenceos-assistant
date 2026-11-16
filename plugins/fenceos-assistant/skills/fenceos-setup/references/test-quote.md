@@ -42,7 +42,7 @@ Use the counts from `summary`. A quantity slightly above the math is fine when i
 
 ## Report
 
-Per quote: internal ID and display number, what was drawn, selected product identities/heights, price lines and total as shown, snapshot identity/source/status and safe failure details when exposed, and a table of part, quantity FenceOS made, quantity expected, pass or fail. Retain the needed summary counts and per-unit inputs so the math can be checked, without raw payloads or customer contact details. End with what was archived and any unavailable evidence. A ready result without the quantity comparison is not a verified test. This proves only the tested quote; for a reported historical failure, use the [BOM failure handoff](bom-failure-handoff.md).
+Per quote: internal ID and display number, what was drawn, selected product identities/heights, price lines and total as shown, snapshot identity/source/status and safe failure details when exposed, and a table of part, quantity FenceOS made, quantity expected, pass or fail. Retain the needed summary counts and per-unit inputs so the math can be checked, without raw payloads or customer contact details. End with what was archived and any unavailable evidence. A ready result without the quantity comparison is not a verified test. This proves only the tested quote; for a reported historical failure, use the BOM failure handoff (`references/bom-failure-handoff.md`).
 
 ## Handing this to a second agent
 

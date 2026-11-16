@@ -2,7 +2,7 @@
 
 FenceOS Assistant helps a fence company set up products, prices and bills of materials through its signed-in browser. An optional finance module helps with Matrix budgets and Cash Copilot plans when you request it. You sign in, confirm the business and approve each exact batch before it changes anything.
 
-This package is **Assistant 0.3.2**, with **FenceOS setup 0.7.3** and **Matrix / Cash Copilot setup 3.3**. Verify these versions in your installed copy and start a new session after updating.
+This package is **Assistant 0.3.3**, with **FenceOS setup 0.7.4** and **Matrix / Cash Copilot setup 3.4**. Verify these versions in your installed copy and start a new session after updating.
 
 This GitHub package is distributed separately from OpenAI's official directory. Official directory review and clean Windows/client browser acceptance remain unverified. Confirm the actual reviewed public release commit before installing.
 
@@ -17,8 +17,8 @@ One marketplace, `fenceos`, contains one plugin, `fenceos-assistant`, and two in
 
 | Skill | Use it for |
 | --- | --- |
-| `fenceos-setup` 0.7.3 | Getting started, products, gates, add-ons, supplier costs, BOM recipes, mappings and locations. Owner-approved test quotes check only the tested quantities. |
-| `matrix-cash-copilot-setup` 3.3 | Explicit annual-budget or cash-plan requests, with separate business, host, plan, period and data approval. |
+| `fenceos-setup` 0.7.4 | Getting started, products, gates, add-ons, supplier costs, BOM recipes, mappings and locations. Owner-approved test quotes check only the tested quantities. |
+| `matrix-cash-copilot-setup` 3.4 | Explicit annual-budget or cash-plan requests, with separate business, host, plan, period and data approval. |
 
 ## Optional finance planning
 

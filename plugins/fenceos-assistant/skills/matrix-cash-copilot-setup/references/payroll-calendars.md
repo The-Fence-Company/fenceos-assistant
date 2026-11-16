@@ -1,6 +1,6 @@
 # Native payroll schedules and legacy conversion
 
-This packaged reference is a navigation aid. At every start, follow [Current deployed product knowledge](live-product-knowledge.md); current guide/build identity and enabled account controls determine which instructions apply. Never use a source feature as proof it is deployed.
+This packaged reference is a navigation aid. At every start, follow Current deployed product knowledge (`references/live-product-knowledge.md`); current guide/build identity and enabled account controls determine which instructions apply. Never use a source feature as proof it is deployed.
 
 Read this before configuring payroll or proposing recurring-rule workarounds. Prefer native payroll schedules when the current deployment exposes them. Keep a legacy fallback only for a confirmed missing capability, not because an older pilot needed many rules.
 
@@ -75,4 +75,4 @@ Carry forward the decision table's gross/net, employee-withholding, employer-tax
 
 Use native date controls if typed text fails to persist, within the cumulative retry budget. Record the first/last covered dates, calendar coverage, source replacements, temporary override expiration, maintenance owner and next review. Amounts outside verified coverage remain unverified.
 
-Use the [Action receipt](action-receipt.md) for conversion. After a lost response, inspect Conversion history and ownership before retrying Apply.
+Use the Action receipt (`references/action-receipt.md`) for conversion. After a lost response, inspect Conversion history and ownership before retrying Apply.

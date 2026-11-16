@@ -6,7 +6,7 @@ Hand-written from a live build of one company's chain-link, vinyl, cedar and Avi
 
 - **The BOM draft lives only in the open page.** Closing the browser tab or pane, a reload, or a long pause throws away every unpublished edit. Do not build a large batch, stop at the preview, and wait a turn for approval. Get the yes first (on the exact batch and on publishing it), then build, preview, check and publish in one stretch. If the draft is lost anyway, rebuild it and compare it with the approved batch before publishing.
 - **Keep a rebuild path.** For anything over a handful of edits, write the batch down (a table or a script) before entering it, so a lost draft costs minutes, not an hour.
-- **One writer at a time.** A publish replaces the whole catalog with your draft. FenceOS refuses a publish whose preview is stale and asks for **Re-run Preview**; the danger is re-running and confirming, which would publish your draft over the other editor's changes. Before Confirm Publish, compare the preview's captured catalog revision with the revision the draft was built on. If they differ, or FenceOS asks to re-run, stop: reload, rebuild on the newer revision, and preview again. Also check whether anyone else is editing Products prices at the same time. **Publishing and revisions** in [verification](verification.md) is the full statement.
+- **One writer at a time.** A publish replaces the whole catalog with your draft. FenceOS refuses a publish whose preview is stale and asks for **Re-run Preview**; the danger is re-running and confirming, which would publish your draft over the other editor's changes. Before Confirm Publish, compare the preview's captured catalog revision with the revision the draft was built on. If they differ, or FenceOS asks to re-run, stop: reload, rebuild on the newer revision, and preview again. Also check whether anyone else is editing Products prices at the same time. **Publishing and revisions** in verification (`references/verification.md`) is the full statement.
 
 ## Checking your own work
 
@@ -68,9 +68,9 @@ Hand-written from a live build of one company's chain-link, vinyl, cedar and Avi
 
 ## Proving it end to end
 
-- The guided review's sample proves the recipes, not what a rep sees. After a big publish or a pricing change, offer a saved test quote per changed family on a labeled test customer: see [test quote](test-quote.md).
-- When the owner asks how the BOM compares with what they sell, run the [coverage check](coverage-check.md) and answer with the gap list.
-- Publishing does not refresh historical snapshots. A protected 409 may preserve prior output, and identical successful output may reuse a snapshot/hash without a new timestamp. For old failed jobs or a generic 409, use the read-only [BOM failure handoff](bom-failure-handoff.md); do not repeat rebuilds or infer recovery from a fresh test.
+- The guided review's sample proves the recipes, not what a rep sees. After a big publish or a pricing change, offer a saved test quote per changed family on a labeled test customer: see test quote (`references/test-quote.md`).
+- When the owner asks how the BOM compares with what they sell, run the coverage check (`references/coverage-check.md`) and answer with the gap list.
+- Publishing does not refresh historical snapshots. A protected 409 may preserve prior output, and identical successful output may reuse a snapshot/hash without a new timestamp. For old failed jobs or a generic 409, use the read-only BOM failure handoff (`references/bom-failure-handoff.md`); do not repeat rebuilds or infer recovery from a fresh test.
 
 ## Supplier data
 

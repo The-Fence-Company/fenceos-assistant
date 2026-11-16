@@ -1,6 +1,6 @@
 # Product-specific setup and verification
 
-This packaged reference is a navigation aid. At every start, follow [Current deployed product knowledge](live-product-knowledge.md); current guide/build identity and enabled account controls determine which instructions apply. Never use a source feature as proof it is deployed.
+This packaged reference is a navigation aid. At every start, follow Current deployed product knowledge (`references/live-product-knowledge.md`); current guide/build identity and enabled account controls determine which instructions apply. Never use a source feature as proof it is deployed.
 
 These are source-grounded navigation hints, not proof of the currently deployed UI. Reinspect live labels, active business, capabilities, and save behavior before acting. Do not needlessly inspect source code during a customer onboarding session.
 
@@ -63,7 +63,7 @@ Read the unit label beside each control before typing: dollars, thousands, cents
 - Legacy Settings payroll uses two paydays per month. The newer native Payment schedules implementation adds weekly, every-other-week, twice-monthly and monthly payroll, including last-weekday selectors and separate work-period mapping. Check deployment and visible controls before treating weekly payroll as unsupported. Existing Settings estimates remain active until reviewed conversion transfers their exact labor/salary cohorts. Do not merely add a native schedule on top of them.
 - Check whether labor estimates and salaried employees cover different people. Inspect taxes/benefits and any recurring payroll entries for overlap. Debt service weekly (unallocated) is added to itemized debt, so confirm zero when all debts are already itemized.
 
-For exact native payroll controls, amount bases, month/year semantics, one-time payments and reviewed source replacement, read [Native payroll schedules and legacy conversion](payroll-calendars.md). Native fixed one-time payments do not implement Matrix performance-bonus eligibility formulas.
+For exact native payroll controls, amount bases, month/year semantics, one-time payments and reviewed source replacement, read Native payroll schedules and legacy conversion (`references/payroll-calendars.md`). Native fixed one-time payments do not implement Matrix performance-bonus eligibility formulas.
 
 ### AP and recurring imports
 

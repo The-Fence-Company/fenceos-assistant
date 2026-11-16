@@ -38,7 +38,7 @@ Work down the group in this order. Draft text from what the owner tells you and 
 10. **Financing settings.** Only if they offer financing: the offer text, term, dealer fee, application link, and disclosure.
 11. **Lifetime Warranty and Old Fence Removal labels**, if they want different customer-facing names.
 
-Then **Pricing & Guardrails**: Wood fence stain price and cost per section, Fence removal price and cost per section, Warranty settings, Commission guardrails. These feed quotes directly, so they go in the pricing decision sheet in [catalog setup](../catalog-setup.md) with the products.
+Then **Pricing & Guardrails**: Wood fence stain price and cost per section, Fence removal price and cost per section, Warranty settings, Commission guardrails. These feed quotes directly, so they go in the pricing decision sheet in catalog setup (`catalog-setup.md`) with the products.
 
 Mismatches between sections are common and easy to miss: a deposit percentage in Deposit settings that differs from the one written in Payment Terms, a review source on the quote page that differs from the saved reviews, a warranty length in the Warranty block that differs from the warranty document. Read the group as a customer would and list every disagreement for the owner before the batch.
 

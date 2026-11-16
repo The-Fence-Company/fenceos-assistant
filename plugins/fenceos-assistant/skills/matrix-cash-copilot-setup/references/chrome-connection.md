@@ -1,6 +1,6 @@
 # Built-in browser first, Chrome only when needed
 
-This reference covers desktop browser fallback. It does not connect a phone or cloud browser to a desktop profile; follow the [client adapter](client-adapter.md) for the current client's supported route and authentication boundary.
+This reference covers desktop browser fallback. It does not connect a phone or cloud browser to a desktop profile; follow the client adapter (`references/client-adapter.md`) for the current client's supported route and authentication boundary.
 
 The agent is the browser operator. Use the chat app's built-in browser for website work by default. Do not ask the owner to click menus, enter reviewed business values, perform imports, or save settings when the tool can do those steps. Ask concise questions in chat for decisions and unclear facts, then carry out the authorized answer yourself. Prefer connected email search tools for discovery; this browser preference does not require replacing a working read-only connector with webmail.
 

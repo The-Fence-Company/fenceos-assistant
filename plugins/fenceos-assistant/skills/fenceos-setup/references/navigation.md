@@ -11,4 +11,4 @@ An empty or partial list may be a failed load. On a 429, honor its displayed ret
 
 Never click **Reset organization BOM** or **Backfill Default BOM Catalog**, including during practice or after batch approval. These are not the draft-only **Reset to Stored Version** control.
 
-Browser connection: section 0 of [SKILL.md](../SKILL.md) covers the first check and the one recovery path. After any reconnect, reload, or tab change, re-read the company context and the open record before the next write; values read before the interruption may be stale.
+Browser connection: section 0 of [SKILL.md](../SKILL.md) covers the first check, and its Troubleshooting table covers the one recovery path. After any reconnect, reload, or tab change, re-read the company context and the open record before the next write; values read before the interruption may be stale.

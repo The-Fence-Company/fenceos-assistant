@@ -26,7 +26,7 @@ The Products catalog and the BOM catalog are edited separately and nothing warns
 | Product / exact ID / ownership when shown | Linked to | Height | Variant | Section | Posts | Gates covered | Gap |
 |---|---|---|---|---|---|---|---|
 
-For an approved saved test quote, compare every relevant saved line's fence-type ID, height, variant and gates, not only the primary fence type. Takeoff uses the quote's organization and exact saved fence-type IDs, not product names. For an existing historical failure, use the [BOM failure handoff](bom-failure-handoff.md); do not open or modify historical jobs as a routine coverage step.
+For an approved saved test quote, compare every relevant saved line's fence-type ID, height, variant and gates, not only the primary fence type. Takeoff uses the quote's organization and exact saved fence-type IDs, not product names. For an existing historical failure, use the BOM failure handoff (`references/bom-failure-handoff.md`); do not open or modify historical jobs as a routine coverage step.
 
 Under the table list:
 
@@ -40,6 +40,6 @@ Rank gaps by how often the product sells. Fix nothing from this table without a 
 
 ## Common fixes
 
-- **Height sold, no recipe:** build it (Phase C), or remove that height from the product if it should be quoted another way (see "Heights and per-section pricing" in [field lessons](field-lessons.md)).
+- **Height sold, no recipe:** build it (Phase C), or remove that height from the product if it should be quoted another way (see "Heights and per-section pricing" in field lessons (`references/field-lessons.md`)).
 - **Gate width sold, no recipe:** build the recipe, or remove the width from the gate product. One gate product with many widths shares one price, so check the price still fits the widest width.
 - **Fence type with no link:** link it (Phase E), or note that it quotes without a material list.

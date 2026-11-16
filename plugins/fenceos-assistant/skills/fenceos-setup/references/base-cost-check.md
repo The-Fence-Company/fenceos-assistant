@@ -26,7 +26,7 @@ One section recipe plus one line post recipe, at the fence type's default varian
    - Implied labor allowance = Base Cost minus BOM materials.
    - Margin on materials alone = (Price minus BOM materials) divided by Price. This is a ceiling; the real margin is lower once labor is in.
    - **Flag** the product when Base Cost is below BOM materials. Its labor allowance is negative and the margin FenceOS shows cannot be right.
-   - If the user gave a labor per section figure in section 2 of [catalog setup](../catalog-setup.md), also flag when Base Cost is below BOM materials plus that labor.
+   - If the user gave a labor per section figure in section 2 of catalog setup (`catalog-setup.md`), also flag when Base Cost is below BOM materials plus that labor.
 7. Gates: do the same with the gate recipe for each type, width, and height the gate product offers, plus the **gate post** recipe multiplied by the number of posts the user says one opening adds. Ask; do not assume. Compare with the gate product's cost field.
 8. Present the table below inside the Phase D batch. For each flagged row the user chooses one: raise Base Cost together with the price or margin that goes with it, fix the recipe or the product cost, or accept as is with a note. Record the choice in the receipt. Only a chosen Base Cost change goes into the save, and only after the normal batch yes.
 

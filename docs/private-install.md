@@ -1,6 +1,6 @@
 # Use FenceOS Assistant with ChatGPT or Claude
 
-Package guide: Assistant **0.3.2**, FenceOS setup **0.7.3**, optional Matrix / Cash Copilot setup **3.3**. Verify the installed versions before starting. Client documentation reviewed November 4, 2026; source compatibility is not proof of a fresh install or browser session.
+Package guide: Assistant **0.3.3**, FenceOS setup **0.7.4**, optional Matrix / Cash Copilot setup **3.4**. Verify the installed versions before starting. Client documentation reviewed November 4, 2026; source compatibility is not proof of a fresh install or browser session.
 
 For GitHub installation, choose the reviewed public commit carrying the versions above. OpenAI directory availability and Windows acceptance are separately qualified; this guide is not proof of either.
 
@@ -96,7 +96,7 @@ If installation or a call fails, send support your company name, the time and th
 
 When either skill starts, the assistant checks once whether a newer FenceOS Assistant has been published. It reads only the version number from the public plugin file on GitHub and sends nothing about you or your company. If a newer version is out, it tells you which version you have, which is available and how to update in your app, then keeps working unless you ask it to wait. If the check cannot run, it says nothing and carries on. It never installs an update without your yes.
 
-Use the supported marketplace update control, start a new session, and verify **Assistant 0.3.2 / setup 0.7.3 / finance 3.3** in the installed copy. A publisher records the actual public commit in the release receipt; only pin a Git route to that reviewed available commit. A local folder or copied skill does not acquire an update URL or automatic refresh: replace the complete reviewed folder/package through its supported route and retain the private checkpoint separately.
+Use the supported marketplace update control, start a new session, and verify **Assistant 0.3.3 / setup 0.7.4 / finance 3.4** in the installed copy. A publisher records the actual public commit in the release receipt; only pin a Git route to that reviewed available commit. A local folder or copied skill does not acquire an update URL or automatic refresh: replace the complete reviewed folder/package through its supported route and retain the private checkpoint separately.
 
 `fenceos-assistant.zip` contains the marketplace folder and both marketplace formats. Extract it before registering a local marketplace. `fenceos-assistant-plugin.zip` contains only the plugin, both manifests at the archive root and both skills, for clients that actually offer plugin upload. A GitHub source archive or a ZIP attached to chat is not evidence of installation.
 
