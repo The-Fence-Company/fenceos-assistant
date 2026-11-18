@@ -1,5 +1,7 @@
 # Coverage check: does the BOM cover what you sell?
 
+Scope: account work. In paper work (SKILL.md, "Two kinds of work") use only the facts and screen names here; no step that opens, saves or reads back a screen applies.
+
 Hand-written. Owners ask this in plain words ("how's my BOM doing compared to my products?"). The answer is a gap list, product by product. Run it read-only at the start of any run on a company that already has products, after each publish, and whenever the owner asks.
 
 ## Why

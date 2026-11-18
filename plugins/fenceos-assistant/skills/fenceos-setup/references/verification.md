@@ -1,5 +1,7 @@
 # Verification
 
+Scope: account work. In paper work (SKILL.md, "Two kinds of work") use only the facts and screen names here; no step that opens, saves or reads back a screen applies.
+
 Verification is done on screen, in the same signed-in FenceOS browser tab the work was done in. Nothing outside the browser is needed.
 
 ## Before each batch and again before each save, publish, or import
@@ -8,7 +10,7 @@ Verification is done on screen, in the same signed-in FenceOS browser tab the wo
 - The required setup page is accessible by that role's route; a Super Admin does not need a Products **BOM Setup** button. Failed loads are unavailable evidence.
 - Only one BOM Builder draft is open, and it is the one this run created.
 
-If any of these has changed, stop and tell the user before continuing.
+If any of these has changed, stop and tell the user (a hard stop, SKILL.md, section 6); continue only after they confirm.
 
 ## After each save
 
@@ -21,14 +23,14 @@ Reopen the saved record on screen and compare every field with the approved batc
 
 Static recipe presence does not prove quantities. Run the guided review's labeled sample drawing and compare its post, rail, picket, and concrete counts with the quantities the customer said to expect. A difference is a blocker. Do not create a quote or job just to produce evidence, with one exception: after a large publish or a pricing change, the owner may approve a labeled test quote on a test customer, saved and never sent, to prove prices and the saved material list. Follow test quote (`references/test-quote.md`). Never create a job.
 
-If a saved value differs from the batch, or FenceOS reports that another editor changed the catalog, report it and prepare a new batch for the user. Do not retry on your own.
+If a saved value differs from the batch, report it and prepare a new batch for the user. If FenceOS reports that another editor changed the catalog, that is a hard stop (SKILL.md, section 6): tell the user and prepare a new batch only on their go. Do not retry on your own.
 
 ## Publishing and revisions
 
 One statement, so the other pages do not disagree. Where another page in this skill says otherwise, this one wins.
 
 - The guided publish previews the catalog and the mapping set together under one captured catalog revision. If the stored catalog or the reviewed payload changes after the preview, FenceOS refuses the publish, stores neither half, keeps the local draft, and asks for **Re-run Preview**. Nothing is replaced in that case.
-- **Re-run Preview** builds a new preview from the local draft, and the draft is a full copy of the catalog as it stood when the page loaded. Confirming after a re-run replaces the stored catalog with that draft, so another editor's changes since the load would be lost. That is why a re-run request is a stop: reload, rebuild the approved batch on the newer revision, preview again, then publish.
+- **Re-run Preview** builds a new preview from the local draft, and the draft is a full copy of the catalog as it stood when the page loaded. Confirming after a re-run replaces the stored catalog with that draft, so another editor's changes since the load would be lost. That is why a re-run request is a hard stop (SKILL.md, section 6). Tell the user and wait; on their go: reload, rebuild the approved batch on the newer revision, preview again, then publish.
 - Mappings: the guided publish stores catalog and mappings in one transaction and its confirmation reports how many mappings were preserved or dropped. Advanced Editor's **Review & Publish** stores the catalog only and preserves saved product BOM links only while the referenced system and style IDs still exist; a renamed or removed ID drops the link. Read the preserved-or-dropped line after every publish and remap anything dropped before the receipt.
 - Publication changes nothing already saved. Historical quote snapshots and saved job material lists keep their numbers; a failed historical job is not repaired by a publish.
 - Evidence stays in four separate statuses: **published**, **coverage checked**, **guided quantities verified**, and **saved test-quote BOM verified**. A publication count never passes any of the other three.
@@ -43,4 +45,4 @@ If an existing historical job still fails or shows a generic 409, follow the BOM
 
 ## Practice run
 
-Before the first real run at a company, the customer may choose to rehearse on an already authorized disposable test organization or an isolated test family. Cleanup is a separate exact approved batch using supported record controls; leave records and report them if safe cleanup is unavailable. Never use organization BOM reset/backfill for practice cleanup. A practice run exercises package-unit conversion, an ambiguous material match, a known zero versus an unknown cost, and a wrong-company stop. Never rehearse against live customer records, accepted quotes, sold jobs, payments, or messages.
+Before the first real run at a company, the customer may choose to rehearse on an already authorized disposable test organization or an isolated test family. Cleanup is a separate exact approved batch using supported record controls; leave records and report them if safe cleanup is unavailable. Never use organization BOM reset/backfill for practice cleanup (SKILL.md, section 6). A practice run exercises package-unit conversion, an ambiguous material match, a known zero versus an unknown cost, and a wrong-company stop. Never rehearse against live customer records, accepted quotes, sold jobs, payments, or messages; use the disposable test organization or stop (SKILL.md, section 6).

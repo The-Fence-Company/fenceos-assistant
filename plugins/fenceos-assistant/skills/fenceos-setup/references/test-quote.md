@@ -1,20 +1,22 @@
 # Test quote: prove it the way a rep would
 
+Scope: account work. In paper work (SKILL.md, "Two kinds of work") use only the facts and screen names here; no step that opens, saves or reads back a screen applies.
+
 Hand-written. The guided review's sample drawing checks recipes in isolation. It does not prove that a rep picking the product in Field Estimator gets the right price and the right material list. A saved test quote with a ready BOM and matching expected quantities proves the tested case. Use it only when the owner asks for it or says yes to it, after a publish or a pricing change. If declined or blocked, record saved test-quote BOM verification as unverified.
 
 ## Rules
 
 - **Owner's yes first.** Name the quotes you will save and the test customer you will use.
 - **Test customer only.** One clearly labeled customer, such as `QA TEST <date>`, with **no phone number and no email** so nothing can be texted or emailed. Use the company's own shop address, never a real customer's.
-- If saving would sync the customer to a CRM, send, or notify anyone, and there is no way to turn that off, stop and ask.
-- Save only. Never send, present, share, accept, sign, take a deposit, mark sold, or schedule.
+- If saving would sync the customer to a CRM, send, or notify anyone, and there is no way to turn that off, stop and ask the owner.
+- Save only. Never send, present, share, accept, sign, take a deposit, mark sold, or schedule. If the owner asks for one of those, say a rep or the office does it on a real quote (SKILL.md, section 6).
 - When done, archive the test quotes. If only Delete is offered, leave them and give the owner the quote numbers.
 
 ## Pick the tests
 
 One quote per family changed, at the heights that changed. Vary the drawing so every recipe gets used:
 
-- a straight run (2 end posts, line posts);
+- a straight run (2 end posts plus line posts: 10 sections need 11 posts, not 10);
 - a run with a turn (adds a corner post);
 - a single gate on one family and a double gate on another;
 - at least one short height (4 ft) and one tall one.

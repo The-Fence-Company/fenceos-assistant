@@ -1,5 +1,7 @@
 # Company and quote settings
 
+Scope: account work. In paper work (SKILL.md, "Two kinds of work") use only the facts and screen names here; no step that opens, saves or reads back a screen applies.
+
 Hand-written. Steps 1, 3, 4, and 6 of the setup path live on **Org Settings** and **Locations**. This page says what is there, in what order to do it, and what you may and may not touch. The screens and the Learning Center win when they disagree with this page.
 
 ## The page
@@ -46,7 +48,7 @@ Mismatches between sections are common and easy to miss: a deposit percentage in
 
 The **Payment processor** is under **Platform setup**, visible to Super Admins only, and uses a payment provider with a merchant account behind it. Read what the Setup checklist and that section show and report it: not configured, configured, or configured with location payment accounts. **Configured** means credentials were saved, not that the provider or bank funding has been verified.
 
-You do not connect it. Say who does: the company's administrator with FenceOS, through the provider's merchant onboarding. Never type, request, or relay merchant credentials, terminal numbers, or account numbers, and never add or change a payment account. Put the step on the board as blocked, with the owner, and continue with everything that does not depend on it. A company is not ready to sell from Estimator until this is live, so the board keeps saying so until it is.
+You do not connect it. Say who does: the company's administrator with FenceOS, through the provider's merchant onboarding (SKILL.md, section 6). Never type, request, or relay merchant credentials, terminal numbers, or account numbers, and never add or change a payment account; the administrator gives those to the provider. Put the step on the board as blocked, with the owner, and continue with everything that does not depend on it. A company is not ready to sell from Estimator until this is live, so the board keeps saying so until it is.
 
 ## Step 6. Online estimator
 
@@ -55,7 +57,7 @@ On **Locations**, for each location that takes online estimates: the estimate li
 ## Rules on this page
 
 - One batch per group, one yes, then save, reload, and read back every field. **Save Settings** writes all edited form sections at once, so a batch must list every field it will change, including ones in other groups that were touched. Some controls save through their own buttons and are not covered by Save Settings: Quote Tax Rates (**Add rate**, **Save changes**), Google rating (**Import from Google**, **Apply**, **Refresh**, **Remove**), Company documents (upload and remove), and the commission policy under Commission guardrails. Save each of those where it lives, inside the same approved batch, and read it back before moving on.
-- Never change **Feature rollouts**, **Operator**, **HighLevel**, **API keys**, or anything under Platform setup. Read them and report.
-- Never change roles or permissions on **Team**, and never work around a missing permission.
+- Never change **Feature rollouts**, **Operator**, **HighLevel**, **API keys**, or anything under Platform setup. Read them, report what they show, and say FenceOS support changes them (SKILL.md, section 6).
+- Never change roles or permissions on **Team**, and never work around a missing permission. The company administrator changes roles there (SKILL.md, section 6).
 - Text you draft for the customer is a proposal until the owner reads it. Keep warranty, guarantee, and terms wording to what they gave you.
 - Most of this page is read live by customer quote pages. Company name, logo and colors, financing text, Google rating, and customer reviews show on every quote page the moment you save, accepted quotes included. The scope, payment terms, and warranty blocks show on quotes still awaiting acceptance and are hidden once a quote is accepted. So an edit here changes quotes the company has already sent. Say that before the batch, and name the open quotes it will touch. Only a few things are frozen onto a quote when it is created or sent: add-on names and descriptions, copies of attached company documents, and the validity window applied at first send. When unsure which kind a field is, read its help text and say so rather than promising either way.

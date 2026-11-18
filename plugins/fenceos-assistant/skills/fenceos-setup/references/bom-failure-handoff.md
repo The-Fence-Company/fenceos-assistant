@@ -1,18 +1,26 @@
 # Existing BOM failure: read-only handoff
 
+Scope: account work. In paper work (SKILL.md, "Two kinds of work") use only the facts and screen names here; no step that opens, saves or reads back a screen applies.
+
 Hand-written. Read this only when the user reports an existing failed historical-job material list, a generic BOM 409, or an old snapshot that stayed failed after catalog publication. Ordinary setup does not require a historical-job audit.
+
+## What to say first
+
+Tell the owner, in these words or close to them: "The error alone does not say why it failed. Do not press Rebuild again. I will write this up for FenceOS support, who can trace it." FenceOS support does the repair; you write the handoff below (SKILL.md, section 6).
+
+Never write "probably", "likely" or "most likely" about a cause, not even with "unconfirmed" beside it. List what support should check instead.
 
 ## What the evidence means
 
 Publishing changes the catalog and mappings; it does not rebuild saved historical snapshots. Assembly/component counts and preserved-mapping counts prove publication only. Takeoff uses the quote's organization and exact saved fence-type IDs for all relevant lines. A similarly named product, including a new organization-owned copy of an inherited product, may have a different ID.
 
-A protected 409 can refuse regeneration and preserve prior output when current BOM setup is incomplete. If `bom_setup_required` is visible, record it as a setup refusal. A generic 409 alone does not establish that code or the root cause. Do not infer a `useGlobalCatalog` defect or prescribe removing the protection.
+A protected 409 can refuse regeneration and preserve prior output when current BOM setup is incomplete. If `bom_setup_required` is visible, record it as a setup refusal. A generic 409 alone does not establish that code or the root cause, so say a 409 can be a refusal, never that it probably is one. Do not infer a `useGlobalCatalog` defect or prescribe removing the protection; leave both to support.
 
 Only `ready` is order-ready. `mixed` and `failed` need review even when they contain material rows. Identical successful output can reuse a snapshot/hash, so a new timestamp is not required proof; compare identity, source, status and expected quantities when visible. Neither a publish nor a successful fresh test proves that an old job was repaired.
 
 ## Read only what the reported failure needs
 
-Use visible details in the user's signed-in browser for the already confirmed company. Keep the existing company-change stop rule. Read existing detail views without editing; do not reproduce the error by clicking Rebuild, Generate, Regenerate, retry, or replay. If reaching a detail requires a write or a missing control, stop there and mark the evidence unavailable.
+Use visible details in the user's signed-in browser for the already confirmed company. Keep the existing company-change stop rule. Read existing detail views without editing; do not reproduce the error by clicking Rebuild, Generate, Regenerate, retry, or replay (SKILL.md, section 6); the user's report is enough. If reaching a detail requires a write or a missing control, stop there and mark the evidence unavailable in the handoff for support.
 
 Capture the following only when exposed in the existing screens or visible internal links. Do not search other companies or unrelated records. Missing fields are **unavailable**, not guessed from labels, defaults, memory, or the currently selected company.
 
@@ -30,6 +38,6 @@ Keep this a compact field summary. Redact customer names/contact details, addres
 
 ## Hand off and stop before mutation
 
-Give the user a support/engineering handoff containing the observed symptom, the available fields above, unavailable fields, and the separately verified setup outcomes from the catalog receipt (`catalog-setup.md`, section 6). Label user-reported facts as reported and hypotheses as unconfirmed. Write the handoff yourself and offer to send it to FenceOS support; send it only on the owner's instruction. Do not hand the owner a list of instructions to relay.
+Give the user a support/engineering handoff containing the observed symptom, the available fields above, unavailable fields, and the separately verified setup outcomes from the catalog receipt (`catalog-setup.md`, section 6). Label user-reported facts as reported. Give support checks to run, not causes. Write the handoff yourself and send it to FenceOS support only on the owner's instruction. Do not hand the owner a list of instructions to relay.
 
-Ask support/engineering to trace the exact same-organization quote lines and selected production source against the catalog revision, determine the structured refusal code, and review the protected snapshot state. Leave recovery to a separately authorized workflow. Do not auto rebuild, replay integrations, re-save accepted quotes, modify sold jobs or production sources, toggle global catalog settings, or touch payments/manual supplements. Keep all existing setup approval and test-customer rules. If normal catalog work continues within the approved setup scope, its receipt must still leave historical-job recovery unverified.
+Ask support/engineering to trace the exact same-organization quote lines and selected production source against the catalog revision, determine the structured refusal code, and review the protected snapshot state. Recovery is FenceOS support's job. Do not auto rebuild, replay integrations, re-save accepted quotes, modify sold jobs or production sources, toggle global catalog settings, or touch payments/manual supplements (SKILL.md, section 6). Keep all existing setup approval and test-customer rules. If normal catalog work continues within the approved setup scope, its receipt must still leave historical-job recovery unverified.

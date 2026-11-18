@@ -1,5 +1,7 @@
 # Base cost check
 
+Scope: account work. In paper work (SKILL.md, "Two kinds of work") use only the facts and screen names here; no step that opens, saves or reads back a screen applies.
+
 Hand-written reference. FenceOS does not perform this comparison today, so it is done from the screens.
 
 ## Why
@@ -8,11 +10,11 @@ A fence type's **Base Cost per Section** is a typed number. Quote line cost is s
 
 ## When
 
-In Phase D, before the fence type or gate form is saved, for every product in the run. Also when the user asks to review pricing or margins on existing products, and after a material cost import that changed costs under existing recipes. When BOM Setup is not available to the signed-in user, say the check cannot be done and move on.
+In Phase D, before the fence type or gate form is saved, for every product in the run. Also when the user asks to review pricing or margins on existing products, and after a material cost import that changed costs under existing recipes. When BOM Setup is not available to this role after a good load, say the check cannot be done and go to the next phase.
 
 ## What a typical section is
 
-One section recipe plus one line post recipe, at the fence type's default variant, for each height the fence type offers. A straight run uses one line post per section, so this is the lowest material cost a section can have. Corner, end, and gate posts, package round-up, waste, delivery, and labor all sit on top of it.
+One section recipe plus one line post recipe, at the fence type's default variant, for each height the fence type offers. A straight run uses about one line post per section (10 sections stand on 9 line posts and 2 end posts), so this is the lowest material cost a section can have. Corner, end, and gate posts, package round-up, waste, delivery, and labor all sit on top of it.
 
 ## Steps
 

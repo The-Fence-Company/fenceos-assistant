@@ -1,5 +1,7 @@
 # Supplier invoices as a price source
 
+Scope: account work. In paper work (SKILL.md, "Two kinds of work") use only the facts and screen names here; no step that opens, saves or reads back a screen applies.
+
 Hand-written reference. Use it when the company has no current supplier price sheet, or the sheet is missing materials the run needs.
 
 ## Why

@@ -1,5 +1,7 @@
 # Catalog and BOM setup mode
 
+Scope: account work. In paper work (SKILL.md, "Two kinds of work") use only the facts and screen names here; no step that opens, saves or reads back a screen applies.
+
 Read this file when the user wants products, prices, gates, supplier costs, BOM recipes, mappings, or location availability set up or checked. The front page ([SKILL.md](SKILL.md)) has already signed the user in, confirmed the company, and recorded the session notes: package, how far along they are, their goal, and fast track or full build. Use those notes; do not ask those questions again.
 
 You work from the user's own browser. Everything you learn comes from screens the user can see, and every change goes through the buttons on those screens. One run covers one fence family: its heights, variants, gate types and widths, locations, materials, products, and recipes. Anything outside that is a new run with its own approval.
@@ -7,9 +9,9 @@ You work from the user's own browser. Everything you learn comes from screens th
 ## 1. Before catalog work
 
 1. Confirm the company and effective role using [company context and navigation](references/navigation.md); recheck before every write.
-2. Follow that reference's Org Admin or Super Admin route. If advanced access is unavailable after a successful load, report the limitation; do not change permissions or feature rollouts. Only accessible phases may proceed.
-3. Open **BOM Setup** (the page is titled **Product BOM Setup**), then **Advanced BOM Catalog** for the BOM Builder with its **Guided Builder** and **Advanced Editor** views. If it shows an unsaved draft, stop and ask the user to resolve their draft. Do not publish or discard someone else's draft. Only one draft stays open during the run.
-4. If any step above fails or the wrong company is showing, stop and say so.
+2. Follow that reference's Org Admin or Super Admin route. If advanced access is unavailable after a successful load, report it and say who can grant it (SKILL.md, section 6); do not change permissions or feature rollouts. Only accessible phases may proceed.
+3. Open **BOM Setup** (the page is titled **Product BOM Setup**), then **Advanced BOM Catalog** for the BOM Builder with its **Guided Builder** and **Advanced Editor** views. If it shows an unsaved draft, that is a hard stop (SKILL.md, section 6): ask the user to publish or discard it themselves; someone else's draft is never yours to publish or discard. Only one draft stays open during the run.
+4. If any step above fails or the wrong company is showing, that is a hard stop (SKILL.md, section 6): change nothing, tell the user what you see, and wait for them to confirm the company.
 
 ## 2. Inputs to collect before any work
 
@@ -100,7 +102,7 @@ Reference: [recipes](references/recipes.md).
 5. **Round up to package** needs a positive package size. Do not leave productless placeholder rows.
 6. Run the guided review with the labeled sample drawing. Compare the resulting quantities with the customer's expected quantities. A difference is a blocker, not a note.
 7. Present the batch, get approval, then publish through **Review catalog and mappings** and **Confirm catalog and mappings publish** so catalog and mappings store together. Advanced Editor's **Review & Publish** can drop mappings; use it only when the user explicitly chooses expert repair.
-8. If FenceOS asks for **Re-run Preview** because another window changed the catalog, stop, report the conflict, and prepare a new review. Do not retry on your own. **Publishing and revisions** in [verification](references/verification.md) says exactly what FenceOS protects here and what it does not.
+8. If FenceOS asks for **Re-run Preview** because another window changed the catalog, stop and tell the user about the conflict (a hard stop, SKILL.md, section 6). Prepare a new review only on their go. Do not retry on your own. **Publishing and revisions** in [verification](references/verification.md) says exactly what FenceOS protects here and what it does not.
 9. After publish, note the row counts, the "mappings preserved or dropped" line, and catalog revision/generation when shown. Record this as **published** and run the [coverage check](references/coverage-check.md). Counts alone do not prove usable materials, verified quantities, or a working saved quote BOM. Publication does not refresh historical snapshots.
 
 ### Phase D. Sellable fence type and gates
@@ -112,7 +114,7 @@ Reference: [products](references/products.md).
 3. **Base cost check.** Before the save, work out the BOM materials for one typical section from the recipes and product costs on screen and compare it with the Base Cost per Section going in. Reference: [base cost check](references/base-cost-check.md). FenceOS does not make this comparison itself. The fence type and the BOM never share a number, so a Base Cost typed months ago keeps driving quote margin and commission after the recipes or material costs change. Flag every fence type or gate whose Base Cost is below its BOM materials alone, show the implied labor allowance for the rest, and put the user's decision on each flagged row in the batch. Never raise or lower a Base Cost without that decision. Do the check for existing products too when the run edits them, and say so when BOM Setup is unavailable and the check cannot be done.
    **Check every height.** A fence type has one price and one Base Cost per section for all its heights, and the quote ignores height. Work out the margin at each height the product offers and show the spread. When a height cannot sell at the shared price, offer the choices in [field lessons](references/field-lessons.md) (accept it, split it into its own fence type, or move it to a **Price at quote** product).
    **Read the current value before proposing a change.** Someone else may have changed it since your last read. Say plainly when a proposal lowers a price. When the owner changes one input, update the pricing decision sheet first and re-price every product it touches in the same batch.
-4. For each fence type shown online, map the exact **Single gate product** and **Double gate product** under Online estimator gate pricing. Never guess a mapping from names.
+4. For each fence type shown online, map the exact **Single gate product** and **Double gate product** under Online estimator gate pricing. Never guess a mapping from names; if the right gate product is not there yet, leave the link for step 6 and say so.
 5. Save, reopen the product, and compare every field with the batch, including the base cost decision. If the form stays open or shows an error, it did not save: retry once, then read it back. Never report a save you have not read back.
 
 **Catalog CSV** is acceptable for several products at once: **Download current** first, upload, and treat the preview screen as the batch for approval. Apply is all-or-nothing.
@@ -162,7 +164,7 @@ Below the table list unresolved rows and why each is held, the new records the b
 
 ## 6. Receipt template
 
-Return this at the end of the run, and a partial one if the run stops early. No passwords, raw supplier files, or unrelated records.
+Return this at the end of the run, and a partial one if the run ends early. No passwords, raw supplier files, or unrelated records.
 
 ```
 FenceOS setup receipt
@@ -205,44 +207,44 @@ Paths with no native undo get a clear warning in the exact batch before its one 
 
 ## 8. Stop conditions
 
-Stop, leave the UI as it is, and report when any of these occur.
+Stop and leave the UI as it is when any of these occur. Tell the user which one, in one plain sentence, and who clears it. The first five are hard stops (SKILL.md, section 6, has the words): nothing more is done until the user answers.
 
-- The company shown on screen changes, the user signs out, or a Super Admin leaves **Viewing as**.
-- A control named here or in the references is not on screen, or the page differs from the guide. Do not improvise.
-- FenceOS reports a catalog changed by another editor, or asks to re-run preview.
-- The publish preview's captured catalog revision differs from the revision the draft was built on. Publishing would erase the newer changes; reload and rebuild instead.
-- The draft-versus-stored diff shows any change that is not in the approved batch.
-- Sample quantities differ from the customer's expected quantities.
-- A supplier row has a formula, missing package count, ambiguous match, or duplicate selected price, and the user has not resolved it.
-- A recipe line's unit does not match the unit its product cost is priced in, and the user has not resolved it.
-- A write would need a quote, job, or customer record created just to produce evidence. The one exception is a test quote the owner approved under [test quote](references/test-quote.md); a job is never created.
-- A save shows an error, or the form stays open after Save, twice in a row.
+- The company shown on screen changes, the signed-in user or role changes, the user signs out, or a Super Admin leaves **Viewing as**. The user signs in, picks the company again and confirms it.
+- An unsaved draft someone else made, or this run's draft gone stale. The user publishes or discards theirs; yours is rebuilt only on their go.
+- A page or list did not load after the one reload. The user checks it; FenceOS support if it stays broken.
+- FenceOS reports a catalog changed by another editor, or asks to re-run preview. Reload and rebuild only on the user's go.
+- The publish preview's captured catalog revision differs from the revision the draft was built on. Publishing would erase the newer changes. Reload and rebuild only on the user's go.
+- A control named here or in the references is not on screen, or the page differs from the guide. Do not improvise. Say "That control is not on my screen"; the company administrator or FenceOS support confirms access (SKILL.md, section 6).
+- The draft-versus-stored diff shows any change that is not in the approved batch. Show the user the extra rows; they approve a new batch, or say yes to discarding and rebuilding the draft (SKILL.md, section 6).
+- Sample quantities differ from the customer's expected quantities. Show expected against actual; the owner says which is right before anything is published.
+- A supplier row has a formula, missing package count, ambiguous match, or duplicate selected price, and the user has not resolved it. Hold the row; the owner answers from the supplier's sheet.
+- A recipe line's unit does not match the unit its product cost is priced in, and the user has not resolved it. Hold the line; the owner states the conversion.
+- A write would need a quote, job, or customer record created just to produce evidence. Tell the owner that proof is unavailable. The one exception is a test quote the owner approved under [test quote](references/test-quote.md); a job is never created.
+- A save shows an error, or the form stays open after Save, twice in a row. Tell the owner it did not save, then "Own the repair" (SKILL.md, section 5): you write the request, FenceOS support fixes it.
 
 ## 9. Never
 
-- Type or request passwords, codes, or API keys.
-- Save, publish, import, or discard this run's unsaved draft without the user's yes on that exact batch. This never permits an organization BOM reset or backfill.
-- Invent costs, dimensions, quantities, package counts, or construction rules.
-- Pick a product, material, or mapping by a similar name.
-- Treat an empty or partial list as proof that something does not exist. Follow [navigation](references/navigation.md) for bounded load checks and role-appropriate company context.
-- Click **Reset organization BOM** or **Backfill Default BOM Catalog**. They rewrite the whole organization's BOM; only a Super Admin acting outside this skill uses them.
-- Touch accepted quotes, deposits, payments, customer messages, schedules, production, permissions, or platform templates.
-- Open the user's email without a yes, or reply to, forward, archive, delete, label, or mark any message in it. Ask before downloading an attachment.
-- Put customer, job, or invoice details into a file you create for an import.
-- Work in the Super Admin platform view when the task is one company's catalog.
+Each line says what to do instead. Where the owner is being turned down, the words to say and who does the job are in section 6 of [SKILL.md](SKILL.md).
+
+- Type or request passwords, codes, or API keys. The user enters their own (section 6).
+- Click **Reset organization BOM** or **Backfill Default BOM Catalog**, or touch accepted quotes, deposits, payments, customer messages, schedules, production, permissions, or platform templates. Say the no and who does it (section 6).
+- Save, publish, import, or discard this run's unsaved draft without the user's yes on that exact batch. Show the batch and wait.
+- Invent costs, dimensions, quantities, package counts, or construction rules. Ask the owner, or hold the row as unknown.
+- Pick a product, material, or mapping by a similar name. Hold the row and show the closest candidates for the owner to pick.
+- Treat an empty or partial list as proof that something does not exist. Use the one-reload rule in [navigation](references/navigation.md), then report it as not loaded.
+- Open the user's email without a yes, or reply to, forward, archive, delete, label, or mark any message in it. Ask first, then read only, and ask again before downloading an attachment.
+- Put customer, job, or invoice details into a file you create for an import. Leave those columns out.
+- Work in the Super Admin platform view when the task is one company's catalog. Work inside the company, as [navigation](references/navigation.md) says.
 
 ## References
 
-Snapshots from the FenceOS User Guide, except where marked hand-written. The live guide inside FenceOS wins when they disagree.
+[materials](references/materials.md), [products](references/products.md) and [recipes](references/recipes.md) are snapshots of the FenceOS User Guide; the live guide inside FenceOS wins when they disagree. The rest are hand-written.
 
-- [materials](references/materials.md) for supplier costs and material records.
-- [products](references/products.md) for sellable products and location availability.
-- [recipes](references/recipes.md) for BOM mappings and Guided Builder.
-- [verification](references/verification.md) for what counts as verified and the disposable evaluation fixture.
-- [base cost check](references/base-cost-check.md) for comparing Base Cost per Section with BOM materials. Hand-written.
-- [getting started paths](references/getting-started-paths.md) for new companies: ask whether they want the fast track (products, descriptions and photos first, BOMs later) or the full build (BOM first), and how to run each. Hand-written.
-- [field lessons](references/field-lessons.md) for protecting the draft, Advanced Editor traps, recipe math mistakes, pricing judgment, heights, and gates, learned on a live build. Read before a long run. Hand-written.
-- [coverage check](references/coverage-check.md) for comparing what Products sells with what the BOM covers, and answering "how is my BOM doing?". Hand-written.
-- [test quote](references/test-quote.md) for proving prices and material lists with a saved, owner-approved test quote, including handing the test to a second agent. Hand-written.
-- [supplier invoices](references/supplier-invoices.md) for finding current prices in supplier invoices and quotes in the user's email. Hand-written.
-- [company settings](references/company-settings.md) for Org Settings, Quote Experience, payment processor status, and the online estimator. Hand-written.
+- [verification](references/verification.md): what counts as verified, publishing and revisions, the practice run.
+- [base cost check](references/base-cost-check.md): Base Cost per Section against BOM materials.
+- [getting started paths](references/getting-started-paths.md): what each setup step covers, fast track and full build.
+- [field lessons](references/field-lessons.md): draft loss, Advanced Editor traps, recipe math mistakes, heights, gates. Read before a long run.
+- [coverage check](references/coverage-check.md): what Products sells against what the BOM covers.
+- [test quote](references/test-quote.md): proving prices and material lists with a saved, owner-approved test quote.
+- [supplier invoices](references/supplier-invoices.md): current prices from supplier invoices in the user's email.
+- [company settings](references/company-settings.md): Org Settings, Quote Experience, payment processor status, the online estimator.
